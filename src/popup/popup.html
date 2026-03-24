@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Markdown Exporter</title>
+    <link rel="stylesheet" href="./popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Markdown export</p>
+        <h1>Capture the active ChatGPT thread.</h1>
+        <p class="lede">Export the current conversation as a clean Markdown file from the browser action.</p>
+      </section>
+
+      <section class="panel">
+        <label class="field" for="userDisplayName">
+          <span>Your display name</span>
+          <input id="userDisplayName" name="userDisplayName" type="text" maxlength="40" placeholder="You">
+        </label>
+
+        <label class="field" for="fileNamePrefix">
+          <span>Filename prefix</span>
+          <input id="fileNamePrefix" name="fileNamePrefix" type="text" maxlength="32" placeholder="chatgpt">
+        </label>
+
+        <button id="exportButton" class="export-button" type="button">Export Markdown</button>
+        <p id="status" class="status" aria-live="polite">Open a ChatGPT conversation tab, then export.</p>
+        <p class="repo-link-row">
+          <a class="repo-link" href="https://github.com/Nassau-1/chatgpt-markdown-exporter" target="_blank" rel="noreferrer">View latest repo</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="./popup.js"></script>
+  </body>
+</html>

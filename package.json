@@ -1,0 +1,7 @@
+{
+  "name": "chatgpt-markdown-exporter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension to export ChatGPT conversations to Markdown.",
+  "type": "module"
+}
