@@ -9,16 +9,18 @@ Status as of 2026-03-24:
 - the project is available as a governed workspace repository under `projects/`
 - the current version loads as an unpacked Chromium extension with no build step
 - the popup includes export settings and a direct link to the latest GitHub repository
+- the popup can prepare a memory export prompt inside an empty ChatGPT composer
 
 ## Why This Exists
 
-This project provides a lightweight browser extension for exporting the active ChatGPT conversation to a clean Markdown file with minimal setup and no build pipeline.
+This project provides a lightweight browser extension for exporting the active ChatGPT conversation to a clean Markdown file and preparing a memory export prompt with minimal setup and no build pipeline.
 
 ## Features
 
 - exports the active ChatGPT thread to Markdown
 - preserves headings, paragraphs, lists, links, code blocks, inline code, blockquotes, and simple tables
 - stores user preferences for display name and filename prefix via extension storage
+- prepares a reusable memory export prompt in an empty ChatGPT composer without auto-sending it
 - works on both `chatgpt.com` and `chat.openai.com`
 - requires no bundler or dependency install for extension loading
 
@@ -30,7 +32,7 @@ chatgpt-markdown-exporter/
 |   |-- architecture.md
 |   `-- decisions/
 |-- scripts/
-|   `-- validate-extension.mjs
+|   `-- validate-extension.ps1
 |-- src/
 |   |-- content-script.js
 |   |-- lib/
@@ -55,7 +57,7 @@ chatgpt-markdown-exporter/
 4. Enable Developer mode.
 5. Choose `Load unpacked`.
 6. Select [src](C:\Users\EnzoTERRIER\Codex\projects\chatgpt-markdown-exporter\src).
-7. Open a ChatGPT conversation and click the extension action.
+7. Open a ChatGPT conversation and click `Export Markdown`, or open a blank chat and click `Prepare Memory Export Prompt`.
 
 ## Verification
 

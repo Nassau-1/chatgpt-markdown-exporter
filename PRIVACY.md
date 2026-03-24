@@ -5,6 +5,7 @@
 ChatGPT Markdown Exporter is designed to operate locally in the user's browser.
 
 - it exports the active ChatGPT conversation only when the user triggers an export
+- it can place a memory export prompt into the current empty ChatGPT composer only when the user triggers that action
 - it does not send conversation content to external servers
 - it does not include analytics, telemetry, ads, or tracking code
 
@@ -16,6 +17,7 @@ The extension runs only on:
 - `https://chat.openai.com/*`
 
 It reads the visible conversation content from the current ChatGPT page so it can generate a Markdown file for download.
+It can also write a user-triggered prompt into the active empty ChatGPT composer without sending it automatically.
 
 ## What The Extension Stores
 
@@ -31,6 +33,7 @@ These preferences are stored using the browser extension storage API.
 The extension does not:
 
 - upload chat content to a remote server
+- auto-send prompts on the user's behalf
 - collect usage analytics
 - sell or share personal data
 - access websites outside the declared ChatGPT host permissions

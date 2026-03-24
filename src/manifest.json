@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "ChatGPT Markdown Exporter",
-  "version": "0.1.0",
-  "description": "Export the current ChatGPT conversation to Markdown.",
+  "version": "1.2.0",
+  "description": "Export the current ChatGPT conversation to Markdown and prepare a memory export prompt.",
   "permissions": [
     "downloads",
     "storage",

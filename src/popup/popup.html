@@ -9,9 +9,9 @@
   <body>
     <main class="shell">
       <section class="hero">
-        <p class="eyebrow">Markdown export</p>
+        <p class="eyebrow">ChatGPT tools</p>
         <h1>Capture the active ChatGPT thread.</h1>
-        <p class="lede">Export the current conversation as a clean Markdown file from the browser action.</p>
+        <p class="lede">Export the current conversation as Markdown or prepare a memory export prompt from the browser action.</p>
       </section>
 
       <section class="panel">
@@ -25,8 +25,11 @@
           <input id="fileNamePrefix" name="fileNamePrefix" type="text" maxlength="32" placeholder="chatgpt">
         </label>
 
-        <button id="exportButton" class="export-button" type="button">Export Markdown</button>
-        <p id="status" class="status" aria-live="polite">Open a ChatGPT conversation tab, then export.</p>
+        <div class="button-stack">
+          <button id="exportButton" class="export-button" type="button">Export Markdown</button>
+          <button id="memoryPromptButton" class="secondary-button" type="button">Prepare Memory Export Prompt</button>
+        </div>
+        <p id="status" class="status" aria-live="polite">Open a ChatGPT tab to export or prepare a memory export prompt.</p>
         <p class="repo-link-row">
           <a class="repo-link" href="https://github.com/Nassau-1/chatgpt-markdown-exporter" target="_blank" rel="noreferrer">View latest repo</a>
         </p>
