@@ -2,6 +2,10 @@
 
 Use reverse chronological order. Keep entries factual and date-stamped.
 
+## v1.2.1 - 2026-03-24
+
+- Security: Replaced overly broad `tabs` permission with `activeTab` to restrict browsing history access.
+
 ## v1.2.0 - 2026-03-24
 
 - Added a `Prepare Memory Export Prompt` popup action for empty ChatGPT composers.
