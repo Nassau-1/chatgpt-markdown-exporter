@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+from functools import lru_cache
 from pathlib import Path, PurePosixPath
 from typing import Any
 
@@ -47,9 +48,15 @@ def load_map(path: str) -> dict[str, Any]:
     return data
 
 
-def matches_pattern(file_path: str, pattern: str) -> bool:
+@lru_cache(maxsize=None)
+def _get_posix_paths(file_path: str) -> tuple[PurePosixPath, PurePosixPath]:
     posix_path = PurePosixPath(file_path)
-    return posix_path.match(pattern) or PurePosixPath(posix_path.name).match(pattern)
+    return posix_path, PurePosixPath(posix_path.name)
+
+
+def matches_pattern(file_path: str, pattern: str) -> bool:
+    posix_path, posix_name = _get_posix_paths(file_path)
+    return posix_path.match(pattern) or posix_name.match(pattern)
 
 
 def documentation_acknowledged(changed_files: list[str], doc_patterns: list[str]) -> bool:
