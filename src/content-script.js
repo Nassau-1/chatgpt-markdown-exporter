@@ -68,32 +68,37 @@
 
     for (const selector of COMPOSER_SELECTORS) {
       for (const element of documentRoot.querySelectorAll(selector)) {
-        if (seen.has(element) || !isVisible(element)) {
+        if (seen.has(element)) {
+          continue;
+        }
+
+        const { visible, rect } = getVisibilityInfo(element);
+        if (!visible) {
           continue;
         }
 
         seen.add(element);
-        candidates.push(element);
+        candidates.push({ element, rect });
       }
     }
 
     candidates.sort((left, right) => {
-      const leftRect = left.getBoundingClientRect();
-      const rightRect = right.getBoundingClientRect();
-      return rightRect.top - leftRect.top;
+      return right.rect.top - left.rect.top;
     });
 
-    return candidates[0] || null;
+    return candidates[0]?.element || null;
   }
 
-  function isVisible(element) {
+  function getVisibilityInfo(element) {
     if (!(element instanceof Element)) {
-      return false;
+      return { visible: false, rect: null };
     }
 
     const style = globalScope.getComputedStyle(element);
     const rect = element.getBoundingClientRect();
-    return style.display !== "none" && style.visibility !== "hidden" && rect.width > 0 && rect.height > 0;
+    const visible = style.display !== "none" && style.visibility !== "hidden" && rect.width > 0 && rect.height > 0;
+
+    return { visible, rect };
   }
 
   function isComposerEmpty(element) {

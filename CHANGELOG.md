@@ -2,6 +2,10 @@
 
 Use reverse chronological order. Keep entries factual and date-stamped.
 
+## v1.2.2 - 2026-03-25
+
+- Performance: Optimized composer detection logic by caching DOM measurements to prevent layout thrashing during sorting.
+
 ## v1.2.1 - 2026-03-24
 
 - Security: Replaced overly broad `tabs` permission with `activeTab` to restrict browsing history access.
