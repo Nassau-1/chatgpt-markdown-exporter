@@ -139,8 +139,15 @@
     selection?.removeAllRanges();
     selection?.addRange(range);
 
-    const inserted = typeof documentRoot.execCommand === "function" && documentRoot.execCommand("insertText", false, value);
-    if (!inserted) {
+    try {
+      range.deleteContents();
+      const textNode = document.createTextNode(value);
+      range.insertNode(textNode);
+      range.setStartAfter(textNode);
+      range.collapse(true);
+      selection?.removeAllRanges();
+      selection?.addRange(range);
+    } catch (error) {
       element.textContent = value;
     }
 
