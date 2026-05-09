@@ -99,6 +99,7 @@ def build_report(args: argparse.Namespace, config: dict[str, Any], changed_files
     new_notes: set[str] = set()
     recommended_actions: set[str] = set()
     example_files: list[str] = []
+    example_files_set: set[str] = set()
     confidences: list[str] = []
 
     repo_project_case = f"[[Project Course - {args.repo_name} - Architecture]]"
@@ -143,7 +144,8 @@ def build_report(args: argparse.Namespace, config: dict[str, Any], changed_files
             recommended_actions.add("manual-project-case-review")
 
         for matched_file in matched_files:
-            if matched_file not in example_files:
+            if matched_file not in example_files_set:
+                example_files_set.add(matched_file)
                 example_files.append(matched_file)
 
         confidences.append(confidence)
