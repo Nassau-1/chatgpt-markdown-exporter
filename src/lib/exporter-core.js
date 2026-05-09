@@ -113,8 +113,16 @@
   }
 
   function removeNestedEntries(entries) {
-    return entries.filter((entry, index) => {
-      return !entries.some((other, otherIndex) => otherIndex !== index && other.contains(entry));
+    const entrySet = new Set(entries);
+    return entries.filter((entry) => {
+      let parent = entry.parentElement;
+      while (parent) {
+        if (entrySet.has(parent)) {
+          return false;
+        }
+        parent = parent.parentElement;
+      }
+      return true;
     });
   }
 
