@@ -12,6 +12,9 @@
     "https://chatgpt.com/*",
     "https://chat.openai.com/*"
   ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; style-src 'self';"
+  },
   "action": {
     "default_title": "Export current conversation",
     "default_popup": "popup/popup.html"
