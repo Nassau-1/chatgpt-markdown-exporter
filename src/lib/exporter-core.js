@@ -292,18 +292,7 @@
   }
 
   function protectMarkdown(input) {
-    const source = input || "";
-    let escaped = "";
-
-    for (const character of source) {
-      if ("\\`*_#[]".includes(character)) {
-        escaped += `\\${character}`;
-      } else {
-        escaped += character;
-      }
-    }
-
-    return escaped;
+    return String(input || "").replace(/[\\`*_#[\]]/g, "\\$&");
   }
 
   function inlineCode(input) {
