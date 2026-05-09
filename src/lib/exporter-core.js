@@ -139,8 +139,8 @@
 
   function turnSpeaker(container, userName) {
     const role =
-      container.getAttribute?.("data-message-author-role") ||
-      container.closest?.("[data-message-author-role]")?.getAttribute?.("data-message-author-role") ||
+      container.getAttribute("data-message-author-role") ||
+      container.closest("[data-message-author-role]")?.getAttribute("data-message-author-role") ||
       "";
 
     if (role === "user") {
@@ -224,7 +224,7 @@
     }
 
     if (tag === "img" || tag === "canvas" || tag === "svg") {
-      const descriptor = squashText(node.getAttribute?.("alt") || "");
+      const descriptor = squashText(node.getAttribute("alt") || "");
       return descriptor ? `[Embedded media: ${protectMarkdown(descriptor)}]` : "[Embedded media]";
     }
 
