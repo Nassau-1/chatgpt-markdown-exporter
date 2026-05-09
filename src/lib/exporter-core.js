@@ -339,6 +339,7 @@
 
   rootScope.ChatGPTMarkdownExporter = {
     exportConversation,
+    deriveConversationTitle,
     makeSlug
   };
 })(globalThis);

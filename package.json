@@ -3,5 +3,8 @@
   "version": "1.2.0",
   "private": true,
   "description": "Chrome extension to export ChatGPT conversations to Markdown and prepare a memory export prompt.",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "node --test src/lib/exporter-core.test.js"
+  }
 }
