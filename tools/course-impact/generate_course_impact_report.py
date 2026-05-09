@@ -33,10 +33,11 @@ def parse_args() -> argparse.Namespace:
 
 def read_changed_files(path: str) -> list[str]:
     changed: list[str] = []
-    for line in Path(path).read_text(encoding="utf-8").splitlines():
-        value = line.strip().replace("\\", "/")
-        if value:
-            changed.append(value)
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            value = line.strip().replace("\\", "/")
+            if value:
+                changed.append(value)
     return changed
 
 
