@@ -33,58 +33,65 @@ async function initialize() {
   setStatus("Ready to export the active conversation or prepare a memory export prompt.");
 }
 
-async function handleExport() {
+async function withActionWrapper(loadingMessage, defaultErrorMessage, action) {
   setButtonsDisabled(true);
-  setStatus("Building Markdown from the active conversation...");
+  setStatus(loadingMessage);
 
   try {
-    const options = {
-      userDisplayName: userDisplayNameInput.value.trim() || DEFAULTS.userDisplayName,
-      fileNamePrefix: fileNamePrefixInput.value.trim() || DEFAULTS.fileNamePrefix
-    };
-
-    await chrome.storage.sync.set(options);
-
-    const tab = await getSupportedTab();
-    const response = await sendMessage(tab.id, {
-      type: "EXPORT_MARKDOWN",
-      options
-    });
-
-    if (!response?.ok) {
-      throw new Error(response?.error || "The content script could not export this page.");
-    }
-
-    await downloadMarkdown(response.fileName, response.markdown);
-    setStatus(`Saved ${response.fileName} with ${response.messageCount} exported messages.`);
+    await action();
   } catch (error) {
-    setStatus(error instanceof Error ? error.message : "Export failed.");
+    setStatus(error instanceof Error ? error.message : defaultErrorMessage);
   } finally {
     setButtonsDisabled(false);
   }
 }
 
-async function handlePrepareMemoryPrompt() {
-  setButtonsDisabled(true);
-  setStatus("Preparing the memory export prompt in the ChatGPT composer...");
+async function handleExport() {
+  await withActionWrapper(
+    "Building Markdown from the active conversation...",
+    "Export failed.",
+    async () => {
+      const options = {
+        userDisplayName: userDisplayNameInput.value.trim() || DEFAULTS.userDisplayName,
+        fileNamePrefix: fileNamePrefixInput.value.trim() || DEFAULTS.fileNamePrefix
+      };
 
-  try {
-    const tab = await getSupportedTab();
-    const response = await sendMessage(tab.id, {
-      type: "PREPARE_MEMORY_EXPORT_PROMPT",
-      prompt: MEMORY_EXPORT_PROMPT
-    });
+      await chrome.storage.sync.set(options);
 
-    if (!response?.ok) {
-      throw new Error(response?.error || "The content script could not prepare the memory export prompt.");
+      const tab = await getSupportedTab();
+      const response = await sendMessage(tab.id, {
+        type: "EXPORT_MARKDOWN",
+        options
+      });
+
+      if (!response?.ok) {
+        throw new Error(response?.error || "The content script could not export this page.");
+      }
+
+      await downloadMarkdown(response.fileName, response.markdown);
+      setStatus(`Saved ${response.fileName} with ${response.messageCount} exported messages.`);
     }
+  );
+}
 
-    setStatus("Prepared the memory export prompt in the composer. Review it before sending.");
-  } catch (error) {
-    setStatus(error instanceof Error ? error.message : "Preparing the memory export prompt failed.");
-  } finally {
-    setButtonsDisabled(false);
-  }
+async function handlePrepareMemoryPrompt() {
+  await withActionWrapper(
+    "Preparing the memory export prompt in the ChatGPT composer...",
+    "Preparing the memory export prompt failed.",
+    async () => {
+      const tab = await getSupportedTab();
+      const response = await sendMessage(tab.id, {
+        type: "PREPARE_MEMORY_EXPORT_PROMPT",
+        prompt: MEMORY_EXPORT_PROMPT
+      });
+
+      if (!response?.ok) {
+        throw new Error(response?.error || "The content script could not prepare the memory export prompt.");
+      }
+
+      setStatus("Prepared the memory export prompt in the composer. Review it before sending.");
+    }
+  );
 }
 
 async function getActiveTab() {
