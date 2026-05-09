@@ -1,0 +1,1307 @@
+Statistical profiling result from isolate-0x8bf7000-22538-v8.log, (2190 ticks, 12 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+    930   42.5%          /home/jules/.nvm/versions/node/v22.22.1/bin/node
+    111    5.1%          /usr/lib/x86_64-linux-gnu/libc.so.6
+      4    0.2%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+      1    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     37    1.7%    3.2%  Builtin: KeyedLoadIC_Megamorphic
+     28    1.3%    2.4%  Builtin: LoadIC
+     16    0.7%    1.4%  Builtin: BaselineOutOfLinePrologue
+     12    0.5%    1.0%  Builtin: StringAdd_CheckNone
+     11    0.5%    1.0%  Builtin: StringFromCodePointAt
+     11    0.5%    1.0%  Builtin: CallFunction_ReceiverIsNotNullOrUndefined
+     10    0.5%    0.9%  JS: *protectMarkdown :296:27
+     10    0.5%    0.9%  Builtin: StringIndexOf
+     10    0.5%    0.9%  Builtin: Call_ReceiverIsNotNullOrUndefined_Baseline_Compact
+      8    0.4%    0.7%  JS: *<anonymous> :119:28
+      7    0.3%    0.6%  Builtin: LoadIC_NoFeedback
+      6    0.3%    0.5%  RegExp: [ \t]+\n
+      6    0.3%    0.5%  Builtin: StoreIC
+      5    0.2%    0.4%  RegExp: \r\n?
+      5    0.2%    0.4%  RegExp: (?:\n\s*){3,}
+      5    0.2%    0.4%  Builtin: ToBooleanForBaselineJump
+      5    0.2%    0.4%  Builtin: StrictEqual_Baseline
+      5    0.2%    0.4%  Builtin: DefineNamedOwnIC
+      5    0.2%    0.4%  Builtin: Call_ReceiverIsNotNullOrUndefined
+      4    0.2%    0.3%  Builtin: StringSubstring
+      4    0.2%    0.3%  Builtin: KeyedLoadIC
+      4    0.2%    0.3%  Builtin: GetProperty
+      4    0.2%    0.3%  Builtin: Call_ReceiverIsNullOrUndefined
+      3    0.1%    0.3%  RegExp: (?:([.:#*]?)((?:--|-?(?:[a-z_]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255})))(?:[\w-]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255}))*)(?::[-\w]+|\[[^\]]+(?:\]|$)|\x28[^\x29]+(?:\x29|$))*)$
+      3    0.1%    0.3%  JS: *nextNode /app/node_modules/jsdom/lib/generated/idl/TreeWalker.js:159:13
+      3    0.1%    0.3%  JS: *next /app/node_modules/symbol-tree/lib/TreeIterator.js:16:13
+      3    0.1%    0.3%  Builtin: OrdinaryGetOwnPropertyDescriptor
+      3    0.1%    0.3%  Builtin: ObjectPrototypeHasOwnProperty
+      3    0.1%    0.3%  Builtin: LoadIC_Megamorphic
+      3    0.1%    0.3%  Builtin: KeyedHasIC_Megamorphic
+      3    0.1%    0.3%  Builtin: FunctionPrototypeHasInstance
+      3    0.1%    0.3%  Builtin: FastNewClosure
+      3    0.1%    0.3%  Builtin: BaselineLeaveFrame
+      2    0.1%    0.2%  JS: ^<anonymous> node:internal/modules/cjs/loader:842:37
+      2    0.1%    0.2%  JS: *tryWrapperForImpl /app/node_modules/jsdom/lib/generated/idl/utils.js:86:27
+      2    0.1%    0.2%  JS: *resolve node:path:1260:10
+      2    0.1%    0.2%  JS: *exports.is /app/node_modules/jsdom/lib/generated/idl/Element.js:18:14
+      2    0.1%    0.2%  JS: *contains /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:474:11
+      2    0.1%    0.2%  JS: *_node /app/node_modules/symbol-tree/lib/SymbolTree.js:49:14
+      2    0.1%    0.2%  JS: *<anonymous> node:internal/modules/cjs/loader:842:37
+      2    0.1%    0.2%  Builtin: WeakMapLookupHashIndex
+      2    0.1%    0.2%  Builtin: StringPrototypeReplace
+      2    0.1%    0.2%  Builtin: ProxyGetProperty
+      2    0.1%    0.2%  Builtin: ObjectHasOwn
+      2    0.1%    0.2%  Builtin: LoadICBaseline
+      2    0.1%    0.2%  Builtin: KeyedStoreIC
+      2    0.1%    0.2%  Builtin: KeyedLoadIC_PolymorphicName
+      2    0.1%    0.2%  Builtin: GrowFastSmiOrObjectElements
+      2    0.1%    0.2%  Builtin: CreateShallowObjectLiteral
+      2    0.1%    0.2%  Builtin: CreateEmptyArrayLiteral
+      2    0.1%    0.2%  Builtin: Call_ReceiverIsAny
+      2    0.1%    0.2%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+      2    0.1%    0.2%  Builtin: CallFunction_ReceiverIsAny
+      2    0.1%    0.2%  Builtin: ArrayPrototypePush
+      2    0.1%    0.2%  Builtin: ArrayPrototypeJoin
+      1    0.0%    0.1%  Script: ~<anonymous> file:///app/node_modules/css-tree/lib/syntax/node/AttributeSelector.js:1:1
+      1    0.0%    0.1%  RegExp: (?=\s?[^>+~(){}<])(?:\*|\||(?:[.#]?(?:--|-?(?:[a-z_]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255})))(?:[\w-]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255}))*)+|(?:\[(?:\*\|)?\s?((?:--|-?(?:[a-z_]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255})))(?:[\w-]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255}))*(?::(?:--|-?(?:[a-z_]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255})))(?:[\w-]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255}))*)?)\s?(?:([~*^$|]=|=)\s?(?:(?:--|-?(?:[a-z_]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255})))(?:[\w-]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255}))*|"[^"\\]*(?:\\.[^"\\]*)*(?:"|$)|'[^'\\]*(?:\\.[^'\\]*)*(?:'|$)))?(?:\s?\b(i))?\s?(?:\]|$))+|(?:::?[-\w]+(?:\x28\s*(?:(?:[-+]?\d*)(?:n\s?[-+]?\s?\d*)?)?|[*|]|(?:(?::[-\w]+(?:\x28(?:[-+]?\d*)(?:n\s?[-+]?\s?\d*)?(?:\x29|$))?)|(?:[.#]?(?:--|-?(?:[a-z_]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255})))(?:[\w-]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255}))*)|(?:\[(?:\*\|)?\s?((?:--|-?(?:[a-z_]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255})))(?:[\w-]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255}))*(?::(?:--|-?(?:[a-z_]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255})))(?:[\w-]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255}))*)?)\s?(?:([~*^$|]=|=)\s?(?:(?:--|-?(?:[a-z_]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255})))(?:[\w-]|[^\x00-\x9f]|\\(?:[^\r\n\f\da-f]|[\da-f]{1,6}\s{0,255}))*|"[^"\\]*(?:\\.[^"\\]*)*(?:"|$)|'[^'\\]*(?:\\.[^'\\]*)*(?:'|$)))?(?:\s?\b(i))?\s?(?:\]|$)))+|\s?[>+~]\s?|\s?,\s?|\s|\x29|$)*)|(?:\s?[\s>+~](?=[^>+~])\s?)|\s?,\s?|\s?)+
+      1    0.0%    0.1%  JS: ~shouldAlwaysSelectNothing /app/node_modules/jsdom/lib/jsdom/living/nodes/ParentNode-impl.js:83:35
+      1    0.0%    0.1%  JS: ~namedItem /app/node_modules/jsdom/lib/jsdom/living/nodes/HTMLCollection-impl.js:25:12
+      1    0.0%    0.1%  JS: ~Resolver :3:38
+      1    0.0%    0.1%  JS: ~<anonymous> node:internal/worker:1:1
+      1    0.0%    0.1%  JS: ~<anonymous> :119:28
+      1    0.0%    0.1%  JS: ~<anonymous> /app/node_modules/undici/lib/api/api-connect.js:1:1
+      1    0.0%    0.1%  JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/nodes/CharacterData-impl.js:1:1
+      1    0.0%    0.1%  JS: ~<anonymous> /app/node_modules/jsdom/lib/generated/idl/HTMLOutputElement.js:1:1
+      1    0.0%    0.1%  JS: ~<anonymous> /app/node_modules/jsdom/lib/api.js:1:1
+      1    0.0%    0.1%  JS: ~#cachedDefaultResolve node:internal/modules/esm/loader:723:24
+      1    0.0%    0.1%  JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      1    0.0%    0.1%  JS: ^renderNode :159:22
+      1    0.0%    0.1%  JS: ^parseSource node:internal/deps/cjs-module-lexer/lexer:85:22
+      1    0.0%    0.1%  JS: ^normalizeString node:path:93:25
+      1    0.0%    0.1%  JS: ^normalizeForDocument :315:32
+      1    0.0%    0.1%  JS: ^isURL node:internal/url:770:15
+      1    0.0%    0.1%  JS: ^get textContent /app/node_modules/jsdom/lib/generated/idl/Node.js:647:20
+      1    0.0%    0.1%  JS: ^get hasChildren /app/node_modules/symbol-tree/lib/SymbolTreeNode.js:27:24
+      1    0.0%    0.1%  JS: ^exports.is /app/node_modules/jsdom/lib/generated/idl/NodeList.js:11:14
+      1    0.0%    0.1%  JS: ^exports.asciiUppercase /app/node_modules/jsdom/lib/jsdom/living/helpers/strings.js:23:26
+      1    0.0%    0.1%  JS: ^appendOrSet /app/node_modules/css-tree/cjs/syntax/config/mix.cjs:3:21
+      1    0.0%    0.1%  JS: ^_reflectGetTheContentAttribute /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:551:33
+      1    0.0%    0.1%  JS: ^_findEntryNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2557:21
+      1    0.0%    0.1%  JS: ^Resolver :3:38
+      1    0.0%    0.1%  JS: ^<anonymous> node:internal/modules/cjs/loader:888:38
+      1    0.0%    0.1%  JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1    0.0%    0.1%  JS: ^#updateContext node:internal/url:894:17
+      1    0.0%    0.1%  JS: ^#getModuleCachedImports node:internal/modules/esm/module_map:52:26
+      1    0.0%    0.1%  JS: *renderElementChildren :155:33
+      1    0.0%    0.1%  JS: *getAttribute /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:195:15
+      1    0.0%    0.1%  JS: *get parentNode /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:155:17
+      1    0.0%    0.1%  JS: *get length /app/node_modules/jsdom/lib/generated/idl/NodeList.js:130:15
+      1    0.0%    0.1%  JS: *get /app/node_modules/jsdom/lib/generated/idl/NodeList.js:165:6
+      1    0.0%    0.1%  JS: *exports.DOMString /app/node_modules/webidl-conversions/lib/index.js:240:21
+      1    0.0%    0.1%  Builtin: WeakMapPrototypeHas
+      1    0.0%    0.1%  Builtin: StringToLowerCaseIntl
+      1    0.0%    0.1%  Builtin: StoreIC_NoFeedback
+      1    0.0%    0.1%  Builtin: StoreICTrampoline
+      1    0.0%    0.1%  Builtin: StoreFastElementIC_InBounds
+      1    0.0%    0.1%  Builtin: SetPrototypeHas
+      1    0.0%    0.1%  Builtin: SetConstructor
+      1    0.0%    0.1%  Builtin: ResumeGeneratorTrampoline
+      1    0.0%    0.1%  Builtin: RegExpSplit
+      1    0.0%    0.1%  Builtin: RegExpPrototypeTest
+      1    0.0%    0.1%  Builtin: RecordWriteSaveFP
+      1    0.0%    0.1%  Builtin: ObjectGetPrototypeOf
+      1    0.0%    0.1%  Builtin: NonNumberToNumeric
+      1    0.0%    0.1%  Builtin: MapPrototypeGet
+      1    0.0%    0.1%  Builtin: KeyedStoreICBaseline
+      1    0.0%    0.1%  Builtin: KeyedLoadICTrampoline_Megamorphic
+      1    0.0%    0.1%  Builtin: JSBuiltinsConstructStub
+      1    0.0%    0.1%  Builtin: InterpreterEntryTrampoline
+      1    0.0%    0.1%  Builtin: HasProperty
+      1    0.0%    0.1%  Builtin: GetPropertyWithReceiver
+      1    0.0%    0.1%  Builtin: FastNewFunctionContextFunction
+      1    0.0%    0.1%  Builtin: FastCreateDataProperty
+      1    0.0%    0.1%  Builtin: DefineNamedOwnIC_NoFeedback
+      1    0.0%    0.1%  Builtin: Decrement_Baseline
+      1    0.0%    0.1%  Builtin: CreateRegExpLiteral
+      1    0.0%    0.1%  Builtin: CloneObjectIC
+      1    0.0%    0.1%  Builtin: Call_ReceiverIsNullOrUndefined_Baseline_Compact
+      1    0.0%    0.1%  Builtin: CallWithArrayLike
+      1    0.0%    0.1%  Builtin: CallVarargs
+      1    0.0%    0.1%  Builtin: CallApiCallbackGeneric
+      1    0.0%    0.1%  Builtin: ArrayPrototypeValues
+      1    0.0%    0.1%  Builtin: ArrayIteratorPrototypeNext
+      1    0.0%    0.1%  Builtin: ArrayFrom
+
+ [C++]:
+   ticks  total  nonlib   name
+    243   11.1%   21.2%  _IO_fwrite@@GLIBC_2.2.5
+    160    7.3%   14.0%  __write@@GLIBC_2.2.5
+    114    5.2%   10.0%  syscall@@GLIBC_2.2.5
+     85    3.9%    7.4%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+     60    2.7%    5.2%  _IO_file_xsputn@@GLIBC_2.2.5
+     20    0.9%    1.7%  __open@@GLIBC_2.2.5
+     17    0.8%    1.5%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+     10    0.5%    0.9%  pthread_cond_signal@@GLIBC_2.3.2
+     10    0.5%    0.9%  isprint@@GLIBC_2.2.5
+      9    0.4%    0.8%  __read@@GLIBC_2.2.5
+      4    0.2%    0.3%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      4    0.2%    0.3%  operator new(unsigned long)@@GLIBCXX_3.4
+      4    0.2%    0.3%  __munmap@@GLIBC_PRIVATE
+      4    0.2%    0.3%  __mmap@@GLIBC_PRIVATE
+      4    0.2%    0.3%  __libc_malloc@@GLIBC_2.2.5
+      3    0.1%    0.3%  __libc_free@@GLIBC_2.2.5
+      2    0.1%    0.2%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      2    0.1%    0.2%  operator delete(void*)@@GLIBCXX_3.4
+      2    0.1%    0.2%  brk@@GLIBC_2.2.5
+      2    0.1%    0.2%  __pthread_rwlock_trywrlock@GLIBC_2.2.5
+      2    0.1%    0.2%  __pthread_mutex_unlock@GLIBC_2.2.5
+      2    0.1%    0.2%  __pthread_mutex_lock@GLIBC_2.2.5
+      1    0.0%    0.1%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      1    0.0%    0.1%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@@GLIBCXX_3.4
+      1    0.0%    0.1%  readlink@@GLIBC_2.2.5
+      1    0.0%    0.1%  operator new[](unsigned long)@@GLIBCXX_3.4
+      1    0.0%    0.1%  fputc@@GLIBC_2.2.5
+      1    0.0%    0.1%  __pthread_rwlock_wrlock@GLIBC_2.2.5
+      1    0.0%    0.1%  __madvise@@GLIBC_PRIVATE
+      1    0.0%    0.1%  __errno_location@@GLIBC_2.2.5
+
+ [Summary]:
+   ticks  total  nonlib   name
+    361   16.5%   31.6%  JavaScript
+    771   35.2%   67.4%  C++
+     75    3.4%    6.6%  GC
+   1046   47.8%          Shared libraries
+     12    0.5%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    243   32.4%   11.1%  _IO_fwrite@@GLIBC_2.2.5
+    151   20.2%    6.9%  __write@@GLIBC_2.2.5
+    114   15.2%    5.2%  syscall@@GLIBC_2.2.5
+     85   11.3%    3.9%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+     60    8.0%    2.7%  _IO_file_xsputn@@GLIBC_2.2.5
+     20    2.7%    0.9%  __open@@GLIBC_2.2.5
+     17    2.3%    0.8%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+     10    1.3%    0.5%  isprint@@GLIBC_2.2.5
+      9    1.2%    0.4%  __read@@GLIBC_2.2.5
+      6    0.8%    0.3%  pthread_cond_signal@@GLIBC_2.3.2
+      4    0.5%    0.2%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      4    0.5%    0.2%  __libc_malloc@@GLIBC_2.2.5
+      3    0.4%    0.1%  operator new(unsigned long)@@GLIBCXX_3.4
+      3    0.4%    0.1%  __libc_free@@GLIBC_2.2.5
+      2    0.3%    0.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      2    0.3%    0.1%  operator delete(void*)@@GLIBCXX_3.4
+      2    0.3%    0.1%  brk@@GLIBC_2.2.5
+      2    0.3%    0.1%  __pthread_rwlock_trywrlock@GLIBC_2.2.5
+      2    0.3%    0.1%  __pthread_mutex_unlock@GLIBC_2.2.5
+      2    0.3%    0.1%  __pthread_mutex_lock@GLIBC_2.2.5
+      2    0.3%    0.1%  __munmap@@GLIBC_PRIVATE
+      1    0.1%    0.0%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      1    0.1%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@@GLIBCXX_3.4
+      1    0.1%    0.0%  operator new[](unsigned long)@@GLIBCXX_3.4
+      1    0.1%    0.0%  fputc@@GLIBC_2.2.5
+      1    0.1%    0.0%  __pthread_rwlock_wrlock@GLIBC_2.2.5
+      1    0.1%    0.0%  __errno_location@@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    930   42.5%  /home/jules/.nvm/versions/node/v22.22.1/bin/node
+    476   51.2%    /home/jules/.nvm/versions/node/v22.22.1/bin/node
+    117   24.6%      JS: ^compileSourceTextModule node:internal/modules/esm/utils:344:33
+    116   99.1%        JS: ^moduleStrategy node:internal/modules/esm/translators:101:50
+    116  100.0%          JS: ^#translate node:internal/modules/esm/loader:538:13
+    116  100.0%            JS: ^getModuleJobForRequire node:internal/modules/esm/loader:446:25
+     81   17.0%      JS: ~exports.installInterfaces /app/node_modules/jsdom/lib/jsdom/living/interfaces.js:254:29
+     81  100.0%        JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+     81  100.0%          JS: ~JSDOM /app/node_modules/jsdom/lib/api.js:35:14
+     81  100.0%            JS: ~profile file:///app/test_profile.js:4:17
+     21    4.4%      JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/css/CSSStyleProperties-impl.js:1:1
+     21  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+     21  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+     21  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+     10    2.1%      JS: ~<anonymous> /app/node_modules/tldts/dist/cjs/index.js:564:25
+     10  100.0%        JS: ~<anonymous> /app/node_modules/tldts/dist/cjs/index.js:1:1
+     10  100.0%          JS: ~<anonymous> /app/node_modules/tough-cookie/dist/index.cjs:1:1
+     10  100.0%            JS: ~<anonymous> /app/node_modules/jsdom/lib/api.js:1:1
+     10    2.1%      Builtin: ObjectPrototypeHasOwnProperty
+     10  100.0%        Builtin: ObjectHasOwn
+      7   70.0%          JS: *get length /app/node_modules/jsdom/lib/generated/idl/NodeList.js:130:15
+      7  100.0%            Builtin: ReflectGet
+      2   20.0%          JS: ^exports.is /app/node_modules/jsdom/lib/generated/idl/HTMLCollection.js:11:14
+      2  100.0%            JS: ^get length /app/node_modules/jsdom/lib/generated/idl/HTMLCollection.js:155:15
+      1   10.0%          JS: ^exports.is /app/node_modules/jsdom/lib/generated/idl/NodeList.js:11:14
+      1  100.0%            JS: ^get length /app/node_modules/jsdom/lib/generated/idl/NodeList.js:130:15
+      8    1.7%      JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      8  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      8  100.0%          JS: ^traceSync node:diagnostics_channel:326:12
+      8  100.0%            JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      8    1.7%      Builtin: StringPrototypeReplace
+      6   75.0%        JS: ^normalizeForDocument :315:32
+      6  100.0%          JS: ^finishDocument :326:26
+      6  100.0%            JS: ^renderNode :159:22
+      1   12.5%        JS: ~makeSlug :333:20
+      1  100.0%          JS: ~exportConversation :19:30
+      1  100.0%            JS: ^profile file:///app/test_profile.js:4:17
+      1   12.5%        JS: *finishDocument :326:26
+      1  100.0%          JS: ^renderNode :159:22
+      1  100.0%            JS: *<anonymous> :156:44
+      7    1.5%      JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      5   71.4%        JS: ^traceSync node:diagnostics_channel:326:12
+      5  100.0%          JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      5  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1455:36
+      2   28.6%        JS: *require node:internal/modules/helpers:146:19
+      1   50.0%          JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/events/ProgressEvent-impl.js:1:1
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1   50.0%          JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/browser/Window.js:1:1
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      6    1.3%      JS: ^mix /app/node_modules/css-tree/cjs/syntax/config/mix.cjs:38:13
+      5   83.3%        JS: ~fork /app/node_modules/css-tree/cjs/syntax/create.cjs:33:13
+      5  100.0%          JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/css/helpers/patched-csstree.js:1:1
+      5  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1   16.7%        JS: ~createSyntax$1 /app/node_modules/css-tree/cjs/syntax/create.cjs:56:24
+      1  100.0%          JS: ~<anonymous> /app/node_modules/css-tree/cjs/syntax/index.cjs:1:1
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      6    1.3%      Builtin: ObjectEntries
+      1   16.7%        JS: ~patchDictionary file:///app/node_modules/css-tree/lib/data.js:35:25
+      1  100.0%          Script: ~<anonymous> file:///app/node_modules/css-tree/lib/data.js:1:1
+      1  100.0%            Builtin: GeneratorPrototypeNext
+      1   16.7%        JS: ~mix file:///app/node_modules/css-tree/lib/syntax/config/mix.js:36:28
+      1  100.0%          JS: ~default file:///app/node_modules/css-tree/lib/syntax/create.js:55:16
+      1  100.0%            Script: ~<anonymous> file:///app/node_modules/css-tree/lib/syntax/index.js:1:1
+      1   16.7%        JS: ~Lexer /app/node_modules/css-tree/cjs/lexer/Lexer.cjs:106:16
+      1  100.0%          JS: ~createSyntax /app/node_modules/css-tree/cjs/syntax/create.cjs:11:22
+      1  100.0%            JS: ~createSyntax$1 /app/node_modules/css-tree/cjs/syntax/create.cjs:56:24
+      1   16.7%        JS: ^patchDictionary file:///app/node_modules/css-tree/lib/data.js:35:25
+      1  100.0%          Script: ~<anonymous> file:///app/node_modules/css-tree/lib/data.js:1:1
+      1  100.0%            Builtin: GeneratorPrototypeNext
+      1   16.7%        JS: ^mix /app/node_modules/css-tree/cjs/syntax/config/mix.cjs:38:13
+      1  100.0%          JS: ~fork /app/node_modules/css-tree/cjs/syntax/create.cjs:33:13
+      1  100.0%            JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/css/helpers/patched-csstree.js:1:1
+      1   16.7%        JS: ^Lexer /app/node_modules/css-tree/cjs/lexer/Lexer.cjs:106:16
+      1  100.0%          JS: ~createSyntax /app/node_modules/css-tree/cjs/syntax/create.cjs:11:22
+      1  100.0%            JS: ~createSyntax$1 /app/node_modules/css-tree/cjs/syntax/create.cjs:56:24
+    273   29.4%    JS: ^wrapSafe node:internal/modules/cjs/loader:1595:18
+    269   98.5%      JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+    269  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+    269  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+    269  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      3    1.1%      JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+      3  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      3  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      3  100.0%            JS: ^traceSync node:diagnostics_channel:326:12
+     81    8.7%    JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+     71   87.7%      JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+     17   23.9%        /home/jules/.nvm/versions/node/v22.22.1/bin/node
+     12   70.6%          JS: ~<anonymous> /app/node_modules/undici/lib/web/cookies/index.js:1:1
+     12  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      5   29.4%          JS: ~<anonymous> /app/node_modules/undici/lib/web/webidl/index.js:1:1
+      5  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      5    7.0%        JS: ~<anonymous> node:http2:1:1
+      5  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      5  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      4    5.6%        JS: ~<anonymous> node:internal/streams/duplex:1:1
+      4  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      4  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      4    5.6%        JS: ~<anonymous> node:http:1:1
+      4  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      4  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      3    4.2%        JS: ~<anonymous> node:tls:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      3  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      3    4.2%        JS: ~<anonymous> node:net:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      3  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      3    4.2%        JS: ~<anonymous> node:internal/fs/promises:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      3  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      3    4.2%        JS: ~<anonymous> node:crypto:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      3  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2    2.8%        JS: ~<anonymous> node:internal/webstreams/readablestream:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2    2.8%        JS: ~<anonymous> node:internal/http2/core:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2    2.8%        JS: ~<anonymous> node:internal/fs/streams:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2    2.8%        JS: ~<anonymous> node:internal/crypto/hkdf:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2    2.8%        JS: ~<anonymous> node:_tls_wrap:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2    2.8%        JS: ~<anonymous> node:_http_client:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    1.4%        JS: ~refresh node:internal/util/colors:26:10
+      1  100.0%          JS: ~<anonymous> node:internal/util/colors:1:1
+      1  100.0%            JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1    1.4%        JS: ~load node:internal/modules/esm/loader:805:7
+      1  100.0%          JS: ~loadAndTranslate node:internal/modules/esm/loader:593:19
+      1  100.0%            JS: ~#createModuleJob node:internal/modules/esm/loader:616:19
+      1    1.4%        JS: ~initCJSParseSync node:internal/modules/esm/translators:79:26
+      1  100.0%          JS: ~commonjsStrategy node:internal/modules/esm/translators:299:54
+      1  100.0%            JS: ~#translate node:internal/modules/esm/loader:538:13
+      1    1.4%        JS: ~<anonymous> node:stream:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    1.4%        JS: ~<anonymous> node:module:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1    1.4%        JS: ~<anonymous> node:internal/worker:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    1.4%        JS: ~<anonymous> node:internal/tls/secure-context:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    1.4%        JS: ~<anonymous> node:internal/streams/operators:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    1.4%        JS: ~<anonymous> node:internal/perf/timerify:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    1.4%        JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.4%        JS: ~<anonymous> node:internal/http2/compat:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    1.4%        JS: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    1.4%        JS: ~<anonymous> node:internal/assert/assertion_error:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    1.4%        JS: ~<anonymous> node:dns:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1    1.4%        JS: ~<anonymous> node:_tls_common:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    1.4%        JS: ~#createModuleJob node:internal/modules/esm/loader:616:19
+      1  100.0%          JS: ~#getJobFromResolveResult node:internal/modules/esm/loader:337:27
+      1  100.0%            JS: ~getModuleJobForImport node:internal/modules/esm/loader:309:30
+      1    1.4%        JS: ~#cachedDefaultResolve node:internal/modules/esm/loader:723:24
+      1  100.0%          JS: ~resolve node:internal/modules/esm/loader:699:10
+      1  100.0%            JS: ~getModuleJobForImport node:internal/modules/esm/loader:309:30
+      6    7.4%      JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      6  100.0%        JS: ^loadBuiltinModule node:internal/modules/helpers:113:27
+      6  100.0%          JS: ^loadBuiltinWithHooks node:internal/modules/cjs/loader:1141:30
+      6  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      3    3.7%      JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      3  100.0%        JS: ^traceSync node:diagnostics_channel:326:12
+      3  100.0%          JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      3  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1455:36
+      1    1.2%      JS: ~<anonymous> /app/node_modules/jsdom/lib/api.js:1:1
+      1  100.0%        JS: ~cjsLoader node:internal/modules/esm/translators:307:38
+      1  100.0%          JS: ~<anonymous> node:internal/modules/esm/translators:198:67
+      1  100.0%            Builtin: CallApiCallbackGeneric
+     10    1.1%    JS: ~<anonymous> /app/node_modules/tough-cookie/dist/index.cjs:1:1
+     10  100.0%      JS: ~<anonymous> /app/node_modules/jsdom/lib/api.js:1:1
+     10  100.0%        JS: ~cjsLoader node:internal/modules/esm/translators:307:38
+     10  100.0%          JS: ~<anonymous> node:internal/modules/esm/translators:198:67
+     10  100.0%            Builtin: CallApiCallbackGeneric
+
+    243   11.1%  _IO_fwrite@@GLIBC_2.2.5
+    182   74.9%    JS: ^wrapSafe node:internal/modules/cjs/loader:1595:18
+    180   98.9%      JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+    180  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+    180  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+    180  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+     39   16.0%    JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+     37   94.9%      JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+     15   40.5%        /home/jules/.nvm/versions/node/v22.22.1/bin/node
+     14   93.3%          JS: ~<anonymous> /app/node_modules/undici/lib/web/cookies/index.js:1:1
+     14  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1    6.7%          JS: ~<anonymous> /app/node_modules/undici/lib/web/webidl/index.js:1:1
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      3    8.1%        JS: ~<anonymous> node:crypto:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      3  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2    5.4%        JS: ~<anonymous> node:perf_hooks:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      2  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      2    5.4%        JS: ~<anonymous> node:internal/streams/duplex:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2    5.4%        JS: ~<anonymous> node:http:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      2  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1    2.7%        JS: ~initCJSParseSync node:internal/modules/esm/translators:79:26
+      1  100.0%          JS: ~commonjsStrategy node:internal/modules/esm/translators:299:54
+      1  100.0%            JS: ~#translate node:internal/modules/esm/loader:538:13
+      1    2.7%        JS: ~getTranslators node:internal/modules/esm/loader:96:24
+      1  100.0%          JS: ~ModuleLoader node:internal/modules/esm/loader:147:20
+      1  100.0%            JS: ~ModuleLoader node:internal/modules/esm/loader:187:14
+      1    2.7%        JS: ~<anonymous> node:tls:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    2.7%        JS: ~<anonymous> node:stream:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    2.7%        JS: ~<anonymous> node:internal/webstreams/readablestream:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    2.7%        JS: ~<anonymous> node:internal/streams/readable:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    2.7%        JS: ~<anonymous> node:internal/streams/pipeline:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    2.7%        JS: ~<anonymous> node:internal/streams/operators:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    2.7%        JS: ~<anonymous> node:internal/readline/interface:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    2.7%        JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.7%        JS: ~<anonymous> node:internal/fs/streams:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    2.7%        JS: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    2.7%        JS: ~<anonymous> node:_http_common:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2    5.1%      JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      2  100.0%        JS: ^traceSync node:diagnostics_channel:326:12
+      2  100.0%          JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      2  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1455:36
+     11    4.5%    /home/jules/.nvm/versions/node/v22.22.1/bin/node
+      2   18.2%      JS: ~finalizeResolution node:internal/modules/esm/resolve:229:28
+      2  100.0%        JS: ~moduleResolve node:internal/modules/esm/resolve:827:23
+      2  100.0%          JS: ~defaultResolve node:internal/modules/esm/resolve:940:24
+      2  100.0%            JS: ~#cachedDefaultResolve node:internal/modules/esm/loader:723:24
+      2   18.2%      JS: ~exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      2  100.0%        JS: ~JSDOM /app/node_modules/jsdom/lib/api.js:35:14
+      2  100.0%          JS: ~profile file:///app/test_profile.js:4:17
+      2  100.0%            Script: ~<anonymous> file:///app/test_profile.js:1:1
+      1    9.1%      JS: ~exports.installInterfaces /app/node_modules/jsdom/lib/jsdom/living/interfaces.js:254:29
+      1  100.0%        JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      1  100.0%          JS: ~JSDOM /app/node_modules/jsdom/lib/api.js:35:14
+      1  100.0%            JS: ~profile file:///app/test_profile.js:4:17
+      1    9.1%      JS: ~exports.convert /app/node_modules/jsdom/lib/generated/idl/PointerEventInit.js:233:19
+      1  100.0%        JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/events/PointerEvent-impl.js:1:1
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+      1    9.1%      JS: ~cjsEmplaceModuleCacheEntry node:internal/modules/esm/translators:326:36
+      1  100.0%        JS: ~cjsPreparseModuleExports node:internal/modules/esm/translators:348:34
+      1  100.0%          JS: ~createCJSModuleWrap node:internal/modules/esm/translators:182:29
+      1  100.0%            JS: ~commonjsStrategy node:internal/modules/esm/translators:299:54
+      1    9.1%      JS: ~_append /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:880:10
+      1  100.0%        JS: ~setDocumentType /app/node_modules/jsdom/lib/jsdom/browser/parser/html.js:123:18
+      1  100.0%          JS: ~_setDocumentType file:///app/node_modules/parse5/dist/parser/index.js:262:21
+      1  100.0%            JS: ~doctypeInInitialMode file:///app/node_modules/parse5/dist/parser/index.js:1339:30
+      1    9.1%      JS: ~__export /app/node_modules/tough-cookie/dist/index.cjs:6:16
+      1  100.0%        JS: ~<anonymous> /app/node_modules/tough-cookie/dist/index.cjs:1:1
+      1  100.0%          JS: ~<anonymous> /app/node_modules/jsdom/lib/api.js:1:1
+      1  100.0%            JS: ~cjsLoader node:internal/modules/esm/translators:307:38
+      1    9.1%      JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    9.1%      JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/helpers/create-element.js:1:1
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      5    2.1%    JS: ~<anonymous> /app/node_modules/tough-cookie/dist/index.cjs:1:1
+      5  100.0%      JS: ~<anonymous> /app/node_modules/jsdom/lib/api.js:1:1
+      5  100.0%        JS: ~cjsLoader node:internal/modules/esm/translators:307:38
+      5  100.0%          JS: ~<anonymous> node:internal/modules/esm/translators:198:67
+      5  100.0%            Builtin: CallApiCallbackGeneric
+      4    1.6%    JS: ~detectModuleFormat node:internal/modules/esm/get_format:36:28
+      4  100.0%      JS: ^getFileProtocolModuleFormat node:internal/modules/esm/get_format:111:37
+      4  100.0%        JS: ~defaultGetFormat node:internal/modules/esm/get_format:240:26
+      4  100.0%          JS: ^defaultLoadSync node:internal/modules/esm/load:136:25
+      4  100.0%            JS: ^#loadAndMaybeBlockOnLoaderThread node:internal/modules/esm/loader:825:35
+
+    160    7.3%  __write@@GLIBC_2.2.5
+     70   43.8%    JS: ^wrapSafe node:internal/modules/cjs/loader:1595:18
+     70  100.0%      JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+     70  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+     70  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+     70  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+     68   42.5%    /home/jules/.nvm/versions/node/v22.22.1/bin/node
+      6    8.8%      JS: ~exports.installInterfaces /app/node_modules/jsdom/lib/jsdom/living/interfaces.js:254:29
+      6  100.0%        JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      6  100.0%          JS: ~JSDOM /app/node_modules/jsdom/lib/api.js:35:14
+      6  100.0%            JS: ~profile file:///app/test_profile.js:4:17
+      5    7.4%      Builtin: ArraySome
+      1   20.0%        JS: ~exports.install /app/node_modules/jsdom/lib/generated/idl/XMLSerializer.js:84:19
+      1  100.0%          JS: ~exports.installInterfaces /app/node_modules/jsdom/lib/jsdom/living/interfaces.js:254:29
+      1  100.0%            JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      1   20.0%        JS: ~exports.install /app/node_modules/jsdom/lib/generated/idl/SVGStringList.js:96:19
+      1  100.0%          JS: ~exports.installInterfaces /app/node_modules/jsdom/lib/jsdom/living/interfaces.js:254:29
+      1  100.0%            JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      1   20.0%        JS: ~exports.install /app/node_modules/jsdom/lib/generated/idl/HTMLTableCaptionElement.js:92:19
+      1  100.0%          JS: ~exports.installInterfaces /app/node_modules/jsdom/lib/jsdom/living/interfaces.js:254:29
+      1  100.0%            JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      1   20.0%        JS: ~exports.install /app/node_modules/jsdom/lib/generated/idl/CSSRuleList.js:96:19
+      1  100.0%          JS: ~exports.installInterfaces /app/node_modules/jsdom/lib/jsdom/living/interfaces.js:254:29
+      1  100.0%            JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      1   20.0%        JS: ~exports.install /app/node_modules/jsdom/lib/generated/idl/AbstractRange.js:83:19
+      1  100.0%          JS: ~exports.installInterfaces /app/node_modules/jsdom/lib/jsdom/living/interfaces.js:254:29
+      1  100.0%            JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      3    4.4%      JS: ~finalizeResolution node:internal/modules/esm/resolve:229:28
+      3  100.0%        JS: ~moduleResolve node:internal/modules/esm/resolve:827:23
+      3  100.0%          JS: ~defaultResolve node:internal/modules/esm/resolve:940:24
+      3  100.0%            JS: ~#cachedDefaultResolve node:internal/modules/esm/loader:723:24
+      3    4.4%      JS: ^__require node:internal/deps/undici/undici:5:49
+      1   33.3%        JS: ~lib/web/fetch/headers.js node:internal/deps/undici/undici:8776:29
+      1  100.0%          JS: ^__require node:internal/deps/undici/undici:5:49
+      1  100.0%            JS: ~lib/web/fetch/response.js node:internal/deps/undici/undici:9234:30
+      1   33.3%        JS: ~lib/web/fetch/body.js node:internal/deps/undici/undici:5553:26
+      1  100.0%          JS: ^__require node:internal/deps/undici/undici:5:49
+      1  100.0%            JS: ~lib/web/fetch/response.js node:internal/deps/undici/undici:9234:30
+      1   33.3%        JS: ~<anonymous> node:internal/deps/undici/undici:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2    2.9%      JS: ~_insert /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:781:10
+      2  100.0%        JS: ~_preInsert /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:765:13
+      2  100.0%          JS: ~_append /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:880:10
+      1   50.0%            JS: ~setDocumentType /app/node_modules/jsdom/lib/jsdom/browser/parser/html.js:123:18
+      1   50.0%            JS: ~appendChild /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:616:14
+      1    1.5%      Script: ~<anonymous> file:///app/node_modules/@asamuzakjp/css-color/dist/esm/js/cache.js:1:1
+      1  100.0%        Builtin: GeneratorPrototypeNext
+      1  100.0%          Builtin: CallApiCallbackGeneric
+      1  100.0%            JS: ~runSync node:internal/modules/esm/module_job:436:10
+      1    1.5%      JS: ~walk file:///app/node_modules/css-tree/lib/walker/create.js:167:26
+      1  100.0%        JS: ~toPlainObject file:///app/node_modules/css-tree/lib/convertor/create.js:16:22
+      1  100.0%          JS: ~walkAST file:///app/node_modules/@asamuzakjp/dom-selector/src/js/parser.js:222:24
+      1  100.0%            JS: ~_correspond file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:362:17
+      1    1.5%      JS: ~unescapeSelector file:///app/node_modules/@asamuzakjp/dom-selector/src/js/parser.js:66:33
+      1  100.0%        JS: ~matchTypeSelector file:///app/node_modules/@asamuzakjp/dom-selector/src/js/matcher.js:542:34
+      1  100.0%          JS: ~_matchSelectorForElement file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:1866:30
+      1  100.0%            JS: ~_matchSelector file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:1949:20
+      1    1.5%      JS: ~set node:internal/modules/esm/module_map:93:6
+      1  100.0%        JS: ~ModuleJobSync node:internal/modules/esm/module_job:374:14
+      1  100.0%          JS: ~getModuleJobForRequire node:internal/modules/esm/loader:446:25
+      1  100.0%            JS: ~ModuleJobSync node:internal/modules/esm/module_job:374:14
+      1    1.5%      JS: ~resolveSync node:internal/modules/esm/loader:783:14
+      1  100.0%        JS: ~#cachedResolveSync node:internal/modules/esm/loader:744:21
+      1  100.0%          JS: ~getModuleJobForRequire node:internal/modules/esm/loader:446:25
+      1  100.0%            JS: ~ModuleJobSync node:internal/modules/esm/module_job:374:14
+      1    1.5%      JS: ~processStructure /app/node_modules/css-tree/cjs/lexer/structure.cjs:125:26
+      1  100.0%        JS: ~getStructureFromConfig /app/node_modules/css-tree/cjs/lexer/structure.cjs:153:32
+      1  100.0%          JS: ~Lexer /app/node_modules/css-tree/cjs/lexer/Lexer.cjs:106:16
+      1  100.0%            JS: ~createSyntax /app/node_modules/css-tree/cjs/syntax/create.cjs:11:22
+      1    1.5%      JS: ~parse file:///app/node_modules/css-tree/lib/syntax/node/String.js:9:22
+      1  100.0%        JS: ~parse file:///app/node_modules/css-tree/lib/syntax/node/AttributeSelector.js:86:22
+      1  100.0%          JS: ~getNode file:///app/node_modules/css-tree/lib/syntax/scope/selector.js:33:17
+      1  100.0%            JS: ~readSequence file:///app/node_modules/css-tree/lib/parser/sequence.js:3:29
+      1    1.5%      JS: ~parse file:///app/node_modules/css-tree/lib/syntax/node/SelectorList.js:12:22
+      1  100.0%        JS: ~<anonymous> file:///app/node_modules/css-tree/lib/parser/create.js:63:20
+      1  100.0%          JS: ~parse file:///app/node_modules/css-tree/lib/parser/create.js:348:27
+      1  100.0%            JS: ~parseSelector file:///app/node_modules/@asamuzakjp/dom-selector/src/js/parser.js:172:30
+      1    1.5%      JS: ~nextNode /app/node_modules/jsdom/lib/jsdom/living/traversal/TreeWalker-impl.js:98:11
+      1  100.0%        JS: ~nextNode /app/node_modules/jsdom/lib/generated/idl/TreeWalker.js:159:13
+      1  100.0%          JS: ~_traverseAndCollectNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2214:30
+      1  100.0%            JS: ~_findNodeWalker file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2289:21
+      1    1.5%      JS: ~newLoadCache node:internal/modules/esm/loader:87:22
+      1  100.0%        JS: ~ModuleLoader node:internal/modules/esm/loader:147:20
+      1  100.0%          JS: ~ModuleLoader node:internal/modules/esm/loader:187:14
+      1  100.0%            JS: ~createModuleLoader node:internal/modules/esm/loader:953:28
+      1    1.5%      JS: ~matches file:///app/node_modules/@asamuzakjp/dom-selector/src/index.js:191:13
+      1  100.0%        JS: ~matches /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:537:10
+      1  100.0%          JS: ~matches /app/node_modules/jsdom/lib/generated/idl/Element.js:637:12
+      1  100.0%            JS: ~pickTurnBody :123:24
+      1    1.5%      JS: ~lib/web/fetch/response.js node:internal/deps/undici/undici:9234:30
+      1  100.0%        JS: ^__require node:internal/deps/undici/undici:5:49
+      1  100.0%          JS: ~lib/web/fetch/index.js node:internal/deps/undici/undici:10396:27
+      1  100.0%            JS: ^__require node:internal/deps/undici/undici:5:49
+      1    1.5%      JS: ~initializeImportMeta node:internal/modules/esm/initialize_import_meta:58:30
+      1  100.0%        JS: ~importMetaInitialize node:internal/modules/esm/loader:861:23
+      1  100.0%          Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+      1  100.0%            Script: ~<anonymous> file:///app/node_modules/css-tree/lib/data-patch.js:1:1
+      1    1.5%      JS: ~get hidden /app/node_modules/jsdom/lib/generated/idl/HTMLElement.js:293:15
+      1  100.0%        JS: ~renderNode :159:22
+      1  100.0%          JS: ~<anonymous> :156:44
+      1  100.0%            Builtin: ArrayMap
+      1    1.5%      JS: ~exports.setup /app/node_modules/jsdom/lib/generated/idl/CustomElementRegistry.js:56:17
+      1  100.0%        JS: ~exports.create /app/node_modules/jsdom/lib/generated/idl/CustomElementRegistry.js:44:18
+      1  100.0%          JS: ~installOwnProperties /app/node_modules/jsdom/lib/jsdom/browser/Window.js:187:30
+      1  100.0%            JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      1    1.5%      JS: ~exports.qname /app/node_modules/jsdom/lib/jsdom/living/helpers/validate-names.js:14:17
+      1  100.0%        JS: ~exports.validateAndExtract /app/node_modules/jsdom/lib/jsdom/living/helpers/validate-names.js:20:30
+      1  100.0%          JS: ~setAttributeNS /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:232:17
+      1  100.0%            JS: ~_reflectSetTheContentAttribute /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:555:33
+      1    1.5%      JS: ~exports.createImpl /app/node_modules/jsdom/lib/generated/idl/Text.js:43:22
+      1  100.0%        JS: ~createTextNode /app/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:769:17
+      1  100.0%          JS: ~set textContent /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:576:18
+      1  100.0%            Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+      1    1.5%      JS: ~exports.createImpl /app/node_modules/jsdom/lib/generated/idl/HTMLHeadElement.js:45:22
+      1  100.0%        JS: ~createElement /app/node_modules/jsdom/lib/jsdom/living/helpers/create-element.js:177:23
+      1  100.0%          JS: ~createElement /app/node_modules/jsdom/lib/jsdom/browser/parser/html.js:60:16
+      1  100.0%            JS: ~_insertFakeElement file:///app/node_modules/parse5/dist/parser/index.js:308:23
+      1    1.5%      JS: ~exports.create /app/node_modules/jsdom/lib/generated/idl/Selection.js:43:18
+      1  100.0%        JS: ~exports.createImpl /app/node_modules/jsdom/lib/generated/idl/Selection.js:48:22
+      1  100.0%          JS: ~installOwnProperties /app/node_modules/jsdom/lib/jsdom/browser/Window.js:187:30
+      1  100.0%            JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      1    1.5%      JS: ~exports.create /app/node_modules/jsdom/lib/generated/idl/HTMLQuoteElement.js:45:18
+      1  100.0%        JS: ~exports.createImpl /app/node_modules/jsdom/lib/generated/idl/HTMLQuoteElement.js:50:22
+      1  100.0%          JS: ~createElement /app/node_modules/jsdom/lib/jsdom/living/helpers/create-element.js:177:23
+      1  100.0%            JS: ~createElement /app/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:784:16
+      1    1.5%      JS: ~exports.convert /app/node_modules/jsdom/lib/generated/idl/StorageEventInit.js:91:19
+      1  100.0%        JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/events/StorageEvent-impl.js:1:1
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+      1    1.5%      JS: ~createWalker /app/node_modules/css-tree/cjs/walker/create.cjs:152:22
+      1  100.0%        JS: ~createSyntax /app/node_modules/css-tree/cjs/syntax/create.cjs:11:22
+      1  100.0%          JS: ~createSyntax$1 /app/node_modules/css-tree/cjs/syntax/create.cjs:56:24
+      1  100.0%            JS: ~<anonymous> /app/node_modules/css-tree/cjs/syntax/index.cjs:1:1
+      1    1.5%      JS: ~createSyntax /app/node_modules/css-tree/cjs/syntax/create.cjs:11:22
+      1  100.0%        JS: ~createSyntax$1 /app/node_modules/css-tree/cjs/syntax/create.cjs:56:24
+      1  100.0%          JS: ~<anonymous> /app/node_modules/css-tree/cjs/syntax/index.cjs:1:1
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1    1.5%      JS: ~createCJSModuleWrap node:internal/modules/esm/translators:182:29
+      1  100.0%        JS: ~commonjsStrategy node:internal/modules/esm/translators:299:54
+      1  100.0%          JS: ~#translate node:internal/modules/esm/loader:538:13
+      1  100.0%            JS: ~afterLoad node:internal/modules/esm/loader:595:23
+      1    1.5%      JS: ~contains /app/node_modules/jsdom/lib/generated/idl/DOMTokenList.js:134:13
+      1  100.0%        JS: ~_matchSelectorForElement file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:1866:30
+      1  100.0%          JS: ^_matchSelector file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:1949:20
+      1  100.0%            JS: ^_matchLeaves file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:1971:18
+      1    1.5%      JS: ~cjsEmplaceModuleCacheEntry node:internal/modules/esm/translators:326:36
+      1  100.0%        JS: ~cjsPreparseModuleExports node:internal/modules/esm/translators:348:34
+      1  100.0%          JS: ~createCJSModuleWrap node:internal/modules/esm/translators:182:29
+      1  100.0%            JS: ~commonjsStrategy node:internal/modules/esm/translators:299:54
+      1    1.5%      JS: ~afterLoad node:internal/modules/esm/loader:595:23
+      1  100.0%        JS: ~loadAndTranslate node:internal/modules/esm/loader:593:19
+      1  100.0%          JS: ~#createModuleJob node:internal/modules/esm/loader:616:19
+      1  100.0%            JS: ~#getJobFromResolveResult node:internal/modules/esm/loader:337:27
+      1    1.5%      JS: ~add node:internal/deps/undici/undici:1134:10
+      1  100.0%        JS: ~insert node:internal/deps/undici/undici:1208:13
+      1  100.0%          JS: ~lib/core/tree.js node:internal/deps/undici/undici:1091:21
+      1  100.0%            JS: ~__require node:internal/deps/undici/undici:5:49
+      1    1.5%      JS: ~_update /app/node_modules/jsdom/lib/jsdom/living/nodes/NodeList-impl.js:27:10
+      1  100.0%        JS: ~get length /app/node_modules/jsdom/lib/jsdom/living/nodes/NodeList-impl.js:19:13
+      1  100.0%          JS: ~get length /app/node_modules/jsdom/lib/generated/idl/NodeList.js:130:15
+      1  100.0%            Builtin: ReflectGet
+      1    1.5%      JS: ~_processStartTag file:///app/node_modules/parse5/dist/parser/index.js:852:21
+      1  100.0%        JS: ~onStartTag file:///app/node_modules/parse5/dist/parser/index.js:833:15
+      1  100.0%          JS: ~emitCurrentTagToken file:///app/node_modules/parse5/dist/tokenizer/index.js:367:24
+      1  100.0%            JS: ~_stateTagName file:///app/node_modules/parse5/dist/tokenizer/index.js:976:18
+      1    1.5%      JS: ~_attachElementToTree file:///app/node_modules/parse5/dist/parser/index.js:276:25
+      1  100.0%        JS: ~_insertElement file:///app/node_modules/parse5/dist/parser/index.js:302:19
+      1  100.0%          JS: ~startTagBeforeHtml file:///app/node_modules/parse5/dist/parser/index.js:1356:28
+      1  100.0%            JS: ~_startTagOutsideForeignContent file:///app/node_modules/parse5/dist/parser/index.js:861:35
+      1    1.5%      JS: ~__export /app/node_modules/tough-cookie/dist/index.cjs:6:16
+      1  100.0%        JS: ~<anonymous> /app/node_modules/tough-cookie/dist/index.cjs:1:1
+      1  100.0%          JS: ~<anonymous> /app/node_modules/jsdom/lib/api.js:1:1
+      1  100.0%            JS: ~cjsLoader node:internal/modules/esm/translators:307:38
+      1    1.5%      JS: ~JSDOM /app/node_modules/jsdom/lib/api.js:35:14
+      1  100.0%        JS: ~profile file:///app/test_profile.js:4:17
+      1  100.0%          Script: ~<anonymous> file:///app/test_profile.js:1:1
+      1  100.0%            Builtin: GeneratorPrototypeNext
+      1    1.5%      JS: ~HTMLCollectionImpl /app/node_modules/jsdom/lib/jsdom/living/nodes/HTMLCollection-impl.js:7:14
+      1  100.0%        JS: ~exports.setup /app/node_modules/jsdom/lib/generated/idl/HTMLCollection.js:58:17
+      1  100.0%          JS: ~exports.create /app/node_modules/jsdom/lib/generated/idl/HTMLCollection.js:46:18
+      1  100.0%            JS: ~exports.createImpl /app/node_modules/jsdom/lib/generated/idl/HTMLCollection.js:51:22
+      1    1.5%      JS: ~DOMSelector file:///app/node_modules/@asamuzakjp/dom-selector/src/index.js:53:14
+      1  100.0%        JS: ~_getDOMSelector /app/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:220:18
+      1  100.0%          JS: ~querySelector /app/node_modules/jsdom/lib/jsdom/living/nodes/ParentNode-impl.js:62:16
+      1  100.0%            JS: ~querySelector /app/node_modules/jsdom/lib/generated/idl/Document.js:1006:18
+      1    1.5%      JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.5%      JS: ~<anonymous> file:///app/node_modules/css-tree/lib/generator/token-before.js:160:19
+      1  100.0%        Builtin: ArrayMap
+      1  100.0%          JS: ~createMap file:///app/node_modules/css-tree/lib/generator/token-before.js:158:19
+      1  100.0%            Script: ~<anonymous> file:///app/node_modules/css-tree/lib/generator/token-before.js:1:1
+      1    1.5%      JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:558:26
+      1  100.0%        Builtin: PromiseConstructor
+      1  100.0%          JS: ~onLoad /app/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:551:20
+      1  100.0%            JS: ~check /app/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:67:12
+      1    1.5%      JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:116:13
+      1    1.5%      JS: ^wrappedFn node:internal/errors:535:21
+      1  100.0%        JS: ^readFileSync node:fs:433:22
+      1  100.0%          JS: ~getSourceSync node:internal/modules/esm/load:36:23
+      1  100.0%            JS: ~defaultLoadSync node:internal/modules/esm/load:136:25
+      1    1.5%      JS: ^wrapSafe node:internal/modules/cjs/loader:1595:18
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      1    1.5%      JS: ^getAttributeNS /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:203:17
+      1  100.0%        JS: ^_attach /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:56:10
+      1  100.0%          JS: ^_insert /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:781:10
+      1  100.0%            JS: ^_preInsert /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:765:13
+      1    1.5%      JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      1  100.0%        JS: ~JSDOM /app/node_modules/jsdom/lib/api.js:35:14
+      1  100.0%          JS: ~profile file:///app/test_profile.js:4:17
+      1  100.0%            Script: ~<anonymous> file:///app/test_profile.js:1:1
+      1    1.5%      JS: ^dirname node:path:1456:10
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      1    1.5%      JS: ^concatCall /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:251:31
+      1  100.0%        JS: ^_querySelectorAll /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1715:44
+      1  100.0%          JS: ^_querySelector /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1808:40
+      1  100.0%            JS: ^querySelector file:///app/node_modules/@asamuzakjp/dom-selector/src/index.js:300:19
+      1    1.5%      JS: ^allocate node:buffer:436:18
+      1  100.0%        JS: ^allocUnsafe node:buffer:411:42
+      1  100.0%          JS: ^tryCreateBuffer node:fs:397:25
+      1  100.0%            JS: ^readFileSync node:fs:433:22
+      1    1.5%      Builtin: ObjectHasOwn
+      1  100.0%        JS: *get namespaceURI /app/node_modules/jsdom/lib/generated/idl/Element.js:1124:21
+      1  100.0%          JS: ^matchTypeSelector file:///app/node_modules/@asamuzakjp/dom-selector/src/js/matcher.js:542:34
+      1  100.0%            JS: *_matchLeaves file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:1971:18
+      1    1.5%      Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+      1  100.0%        Builtin: ObjectEntries
+      1  100.0%          JS: ~cr /app/node_modules/@bramus/specificity/dist/index.cjs:1:23005
+      1  100.0%            JS: ~<anonymous> /app/node_modules/@bramus/specificity/dist/index.cjs:1:1
+      1    1.5%      Builtin: ArrayForEach
+      1  100.0%        JS: ~lib/llhttp/constants.js node:internal/deps/undici/undici:2748:28
+      1  100.0%          JS: ^__require node:internal/deps/undici/undici:5:49
+      1  100.0%            JS: ~lib/dispatcher/client-h1.js node:internal/deps/undici/undici:5878:32
+      9    5.6%    JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      9  100.0%      JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2   22.2%        JS: ~<anonymous> node:internal/http2/compat:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2   22.2%        /home/jules/.nvm/versions/node/v22.22.1/bin/node
+      2  100.0%          JS: ~<anonymous> /app/node_modules/undici/lib/web/cookies/index.js:1:1
+      2  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1   11.1%        JS: ~initCJSParseSync node:internal/modules/esm/translators:79:26
+      1  100.0%          JS: ~commonjsStrategy node:internal/modules/esm/translators:299:54
+      1  100.0%            JS: ~#translate node:internal/modules/esm/loader:538:13
+      1   11.1%        JS: ~<anonymous> node:perf_hooks:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1   11.1%        JS: ~<anonymous> node:internal/streams/operators:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1   11.1%        JS: ~<anonymous> node:http:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1   11.1%        JS: ~<anonymous> node:assert:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+
+    114    5.2%  syscall@@GLIBC_2.2.5
+     59   51.8%    /home/jules/.nvm/versions/node/v22.22.1/bin/node
+     51   86.4%      JS: *findParentPackageJSON node:internal/modules/package_json_reader:142:31
+     51  100.0%        JS: ^getNearestParentPackageJSON node:internal/modules/package_json_reader:178:37
+     38   74.5%          JS: ^trySelf node:internal/modules/cjs/loader:596:17
+     38  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1300:35
+     13   25.5%          JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+     13  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      8   13.6%      JS: *realpathSync node:fs:2715:22
+      6   75.0%        JS: ^toRealPath node:internal/modules/helpers:60:20
+      6  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:669:28
+      6  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1300:35
+      2   25.0%        JS: ^finalizeResolution node:internal/modules/esm/resolve:229:28
+      2  100.0%          JS: ^moduleResolve node:internal/modules/esm/resolve:827:23
+      2  100.0%            JS: ^defaultResolve node:internal/modules/esm/resolve:940:24
+     20   17.5%    JS: ^stat node:internal/modules/cjs/loader:251:14
+     17   85.0%      JS: ^<anonymous> node:internal/modules/cjs/loader:669:28
+     17  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1300:35
+     17  100.0%          JS: ^defaultResolveImpl node:internal/modules/cjs/loader:1011:30
+     17  100.0%            JS: ^resolveForCJSWithHooks node:internal/modules/cjs/loader:1006:32
+      3   15.0%      JS: ^tryFile node:internal/modules/cjs/loader:529:17
+      3  100.0%        JS: ^tryExtensions node:internal/modules/cjs/loader:544:23
+      3  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:669:28
+      3  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1300:35
+     16   14.0%    JS: ^findParentPackageJSON node:internal/modules/package_json_reader:142:31
+     16  100.0%      JS: ^getNearestParentPackageJSON node:internal/modules/package_json_reader:178:37
+     10   62.5%        JS: ^trySelf node:internal/modules/cjs/loader:596:17
+     10  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1300:35
+     10  100.0%            JS: ^defaultResolveImpl node:internal/modules/cjs/loader:1011:30
+      5   31.3%        JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+      5  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      5  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1    6.3%        JS: ^<anonymous> node:internal/modules/cjs/loader:1300:35
+      1  100.0%          JS: ^defaultResolveImpl node:internal/modules/cjs/loader:1011:30
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+     11    9.6%    JS: ^realpathSync node:fs:2715:22
+      8   72.7%      JS: ^toRealPath node:internal/modules/helpers:60:20
+      4   50.0%        JS: ^tryFile node:internal/modules/cjs/loader:529:17
+      4  100.0%          JS: ^tryExtensions node:internal/modules/cjs/loader:544:23
+      4  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:669:28
+      4   50.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:669:28
+      4  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1300:35
+      4  100.0%            JS: ^defaultResolveImpl node:internal/modules/cjs/loader:1011:30
+      2   18.2%      JS: ^finalizeResolution node:internal/modules/esm/resolve:229:28
+      2  100.0%        JS: ^moduleResolve node:internal/modules/esm/resolve:827:23
+      2  100.0%          JS: ^defaultResolve node:internal/modules/esm/resolve:940:24
+      2  100.0%            JS: ^#cachedDefaultResolve node:internal/modules/esm/loader:723:24
+      1    9.1%      JS: ~cjsLoader node:internal/modules/esm/translators:307:38
+      1  100.0%        JS: ~<anonymous> node:internal/modules/esm/translators:198:67
+      1  100.0%          Builtin: CallApiCallbackGeneric
+      1  100.0%            JS: ~run node:internal/modules/esm/module_job:332:12
+      4    3.5%    JS: ^readFileSync node:fs:433:22
+      4  100.0%      JS: ^defaultLoadImpl node:internal/modules/cjs/loader:1095:25
+      4  100.0%        JS: ^loadSource node:internal/modules/cjs/loader:1721:20
+      4  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+      4  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      2    1.8%    JS: ^finalizeResolution node:internal/modules/esm/resolve:229:28
+      2  100.0%      JS: ^moduleResolve node:internal/modules/esm/resolve:827:23
+      2  100.0%        JS: ^defaultResolve node:internal/modules/esm/resolve:940:24
+      2  100.0%          JS: ^#cachedDefaultResolve node:internal/modules/esm/loader:723:24
+      2  100.0%            JS: ^#resolveAndMaybeBlockOnLoaderThread node:internal/modules/esm/loader:763:38
+
+    111    5.1%  /usr/lib/x86_64-linux-gnu/libc.so.6
+     34   30.6%    JS: ^wrapSafe node:internal/modules/cjs/loader:1595:18
+     34  100.0%      JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+     34  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+     34  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+     34  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+     24   21.6%    /home/jules/.nvm/versions/node/v22.22.1/bin/node
+      7   29.2%      JS: ~exports.installInterfaces /app/node_modules/jsdom/lib/jsdom/living/interfaces.js:254:29
+      7  100.0%        JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      7  100.0%          JS: ~JSDOM /app/node_modules/jsdom/lib/api.js:35:14
+      7  100.0%            JS: ~profile file:///app/test_profile.js:4:17
+      1    4.2%      JS: ~switchContext /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:933:34
+      1  100.0%        JS: ~_querySelectorAll /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1715:44
+      1  100.0%          JS: ~_querySelector /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1808:40
+      1  100.0%            JS: ~querySelector file:///app/node_modules/@asamuzakjp/dom-selector/src/index.js:300:19
+      1    4.2%      JS: ~queueMutationRecord /app/node_modules/jsdom/lib/jsdom/living/helpers/mutation-observers.js:33:29
+      1  100.0%        JS: ~queueAttributeMutationRecord /app/node_modules/jsdom/lib/jsdom/living/helpers/mutation-observers.js:110:38
+      1  100.0%          JS: ~exports.appendAttribute /app/node_modules/jsdom/lib/jsdom/living/attributes.js:50:36
+      1  100.0%            JS: ~exports.setAttributeValue /app/node_modules/jsdom/lib/jsdom/living/attributes.js:242:38
+      1    4.2%      JS: ~exports.install /app/node_modules/jsdom/lib/generated/idl/CSSStyleProperties.js:103:19
+      1  100.0%        JS: ~exports.installInterfaces /app/node_modules/jsdom/lib/jsdom/living/interfaces.js:254:29
+      1  100.0%          JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      1  100.0%            JS: ~JSDOM /app/node_modules/jsdom/lib/api.js:35:14
+      1    4.2%      JS: ~exports._convertInherit /app/node_modules/jsdom/lib/generated/idl/MouseEventInit.js:9:27
+      1  100.0%        JS: ~exports.convert /app/node_modules/jsdom/lib/generated/idl/MouseEventInit.js:181:19
+      1  100.0%          JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/events/MouseEvent-impl.js:1:1
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1    4.2%      JS: ~Lexer file:///app/node_modules/css-tree/lib/lexer/Lexer.js:102:16
+      1  100.0%        JS: ~createSyntax file:///app/node_modules/css-tree/lib/syntax/create.js:9:22
+      1  100.0%          JS: ~default file:///app/node_modules/css-tree/lib/syntax/create.js:55:16
+      1  100.0%            Script: ~<anonymous> file:///app/node_modules/css-tree/lib/syntax/index.js:1:1
+      1    4.2%      JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.2%      JS: ~<anonymous> /app/node_modules/tldts/dist/cjs/index.js:564:25
+      1  100.0%        JS: ~<anonymous> /app/node_modules/tldts/dist/cjs/index.js:1:1
+      1  100.0%          JS: ~<anonymous> /app/node_modules/tough-cookie/dist/index.cjs:1:1
+      1  100.0%            JS: ~<anonymous> /app/node_modules/jsdom/lib/api.js:1:1
+      1    4.2%      JS: ^readFileSync node:fs:433:22
+      1  100.0%        JS: ~getSourceSync node:internal/modules/esm/load:36:23
+      1  100.0%          JS: ~defaultLoadSync node:internal/modules/esm/load:136:25
+      1  100.0%            JS: ~#loadAndMaybeBlockOnLoaderThread node:internal/modules/esm/loader:825:35
+      1    4.2%      JS: ^mix /app/node_modules/css-tree/cjs/syntax/config/mix.cjs:38:13
+      1  100.0%        JS: ~fork /app/node_modules/css-tree/cjs/syntax/create.cjs:33:13
+      1  100.0%          JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/css/helpers/patched-csstree.js:1:1
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1    4.2%      JS: ^contains /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:474:11
+      1  100.0%        JS: ^contains /app/node_modules/jsdom/lib/generated/idl/Node.js:243:13
+      1  100.0%          JS: ^<anonymous> :119:28
+      1  100.0%            Builtin: ArraySome
+      1    4.2%      JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%        JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1  100.0%          /home/jules/.nvm/versions/node/v22.22.1/bin/node
+      1  100.0%            JS: ~<anonymous> /app/node_modules/undici/lib/web/cookies/index.js:1:1
+      1    4.2%      JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1  100.0%        JS: ^traceSync node:diagnostics_channel:326:12
+      1  100.0%          JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1455:36
+      1    4.2%      JS: *protectMarkdown :296:27
+      1  100.0%        JS: ^renderNode :159:22
+      1  100.0%          JS: *<anonymous> :156:44
+      1  100.0%            Builtin: ArrayMap
+      1    4.2%      JS: *_node /app/node_modules/symbol-tree/lib/SymbolTree.js:49:14
+      1  100.0%        JS: ~following /app/node_modules/symbol-tree/lib/SymbolTree.js:220:18
+      1  100.0%          JS: ^next /app/node_modules/symbol-tree/lib/TreeIterator.js:16:13
+      1  100.0%            JS: ~exports.firstDescendantWithLocalName /app/node_modules/jsdom/lib/jsdom/living/helpers/traversal.js:64:40
+      1    4.2%      Builtin: StringPrototypeMatch
+      1  100.0%        JS: ~_querySelectorAll /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1715:44
+      1  100.0%          JS: ~_querySelector /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1808:40
+      1  100.0%            JS: ~querySelector file:///app/node_modules/@asamuzakjp/dom-selector/src/index.js:300:19
+      1    4.2%      Builtin: StringPrototypeCharCodeAt
+      1  100.0%        JS: ^parseSource node:internal/deps/cjs-module-lexer/lexer:85:22
+      1  100.0%          JS: ~parseCJS node:internal/deps/cjs-module-lexer/lexer:40:19
+      1  100.0%            JS: ~cjsPreparseModuleExports node:internal/modules/esm/translators:348:34
+      1    4.2%      Builtin: CallApiCallbackGeneric
+      1  100.0%        JS: ~run node:internal/modules/esm/module_job:332:12
+      1  100.0%          Builtin: AsyncFunctionAwaitResolveClosure
+      6    5.4%    JS: ^readFileSync node:fs:433:22
+      6  100.0%      JS: ^defaultLoadImpl node:internal/modules/cjs/loader:1095:25
+      6  100.0%        JS: ^loadSource node:internal/modules/cjs/loader:1721:20
+      6  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+      6  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      4    3.6%    JS: *protectMarkdown :296:27
+      4  100.0%      JS: ^renderNode :159:22
+      2   50.0%        JS: ^<anonymous> :156:44
+      2  100.0%          Builtin: ArrayMap
+      2  100.0%            JS: ^renderElementChildren :155:33
+      2   50.0%        JS: *<anonymous> :156:44
+      2  100.0%          Builtin: ArrayMap
+      2  100.0%            JS: ^renderElementChildren :155:33
+      2    1.8%    JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      2  100.0%      JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1   50.0%        JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   50.0%        JS: ~<anonymous> node:internal/fs/streams:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      2    1.8%    Builtin: ArrayPrototypeJoin
+      2  100.0%      JS: ^exportConversation :19:30
+      2  100.0%        JS: ^profile file:///app/test_profile.js:4:17
+      2  100.0%          Script: ~<anonymous> file:///app/test_profile.js:1:1
+      2  100.0%            Builtin: GeneratorPrototypeNext
+
+     85    3.9%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+     62   72.9%    JS: ^wrapSafe node:internal/modules/cjs/loader:1595:18
+     61   98.4%      JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+     61  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+     61  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+     61  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1    1.6%      JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1455:36
+      1  100.0%          JS: ^require node:internal/modules/helpers:146:19
+      1  100.0%            JS: ~<anonymous> /app/node_modules/whatwg-url/lib/URL-impl.js:1:1
+     15   17.6%    JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+     13   86.7%      JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      5   38.5%        /home/jules/.nvm/versions/node/v22.22.1/bin/node
+      4   80.0%          JS: ~<anonymous> /app/node_modules/undici/lib/web/cookies/index.js:1:1
+      4  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1   20.0%          JS: ~<anonymous> /app/node_modules/undici/lib/web/webidl/index.js:1:1
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1    7.7%        JS: ~<anonymous> node:worker_threads:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1    7.7%        JS: ~<anonymous> node:tls:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    7.7%        JS: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    7.7%        JS: ~<anonymous> node:http2:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1    7.7%        JS: ~<anonymous> node:crypto:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    7.7%        JS: ~<anonymous> node:_http_client:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1    7.7%        JS: ~#cachedDefaultResolve node:internal/modules/esm/loader:723:24
+      1  100.0%          JS: ~resolve node:internal/modules/esm/loader:699:10
+      1  100.0%            JS: ~getModuleJobForImport node:internal/modules/esm/loader:309:30
+      1    7.7%        Builtin: ReflectGet
+      1  100.0%          Builtin: CallApiCallbackGeneric
+      1  100.0%            JS: ~builtinStrategy node:internal/modules/esm/translators:406:52
+      1    6.7%      JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1  100.0%        JS: ^loadBuiltinModule node:internal/modules/helpers:113:27
+      1  100.0%          JS: ^loadBuiltinWithHooks node:internal/modules/cjs/loader:1141:30
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1    6.7%      JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1  100.0%        JS: ^traceSync node:diagnostics_channel:326:12
+      1  100.0%          JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1455:36
+      8    9.4%    /home/jules/.nvm/versions/node/v22.22.1/bin/node
+      2   25.0%      JS: ~resolveSync node:internal/modules/esm/loader:783:14
+      2  100.0%        JS: ~#cachedResolveSync node:internal/modules/esm/loader:744:21
+      2  100.0%          JS: ~getModuleJobForRequire node:internal/modules/esm/loader:446:25
+      2  100.0%            JS: ~ModuleJobSync node:internal/modules/esm/module_job:374:14
+      2   25.0%      JS: ~finalizeResolution node:internal/modules/esm/resolve:229:28
+      2  100.0%        JS: ~moduleResolve node:internal/modules/esm/resolve:827:23
+      2  100.0%          JS: ~defaultResolve node:internal/modules/esm/resolve:940:24
+      2  100.0%            JS: ~#cachedDefaultResolve node:internal/modules/esm/loader:723:24
+      1   12.5%      JS: ~profile file:///app/test_profile.js:4:17
+      1  100.0%        Script: ~<anonymous> file:///app/test_profile.js:1:1
+      1  100.0%          Builtin: GeneratorPrototypeNext
+      1  100.0%            Builtin: CallApiCallbackGeneric
+      1   12.5%      JS: ~_node /app/node_modules/symbol-tree/lib/SymbolTree.js:49:14
+      1  100.0%        JS: ~initialize /app/node_modules/symbol-tree/lib/SymbolTree.js:43:19
+      1  100.0%          JS: ~NodeImpl /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:117:14
+      1  100.0%            JS: ~DocumentImpl /app/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:121:14
+      1   12.5%      JS: ~JSDOM /app/node_modules/jsdom/lib/api.js:35:14
+      1  100.0%        JS: ~profile file:///app/test_profile.js:4:17
+      1  100.0%          Script: ~<anonymous> file:///app/test_profile.js:1:1
+      1  100.0%            Builtin: GeneratorPrototypeNext
+      1   12.5%      JS: ~<anonymous> node:internal/main/run_main_module:1:1
+
+     60    2.7%  _IO_file_xsputn@@GLIBC_2.2.5
+     43   71.7%    JS: ^wrapSafe node:internal/modules/cjs/loader:1595:18
+     42   97.7%      JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+     42  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+     42  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+     42  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1    2.3%      JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1  100.0%            JS: ^traceSync node:diagnostics_channel:326:12
+     11   18.3%    JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      9   81.8%      JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      4   44.4%        /home/jules/.nvm/versions/node/v22.22.1/bin/node
+      4  100.0%          JS: ~<anonymous> /app/node_modules/undici/lib/web/cookies/index.js:1:1
+      4  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1   11.1%        JS: ~<anonymous> node:perf_hooks:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1   11.1%        JS: ~<anonymous> node:internal/streams/duplex:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1   11.1%        JS: ~<anonymous> node:internal/http2/core:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1   11.1%        JS: ~<anonymous> node:internal/assert/utils:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:422:24
+      1   11.1%        JS: ~<anonymous> node:http2:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:385:27
+      1  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1    9.1%      JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1  100.0%        JS: ^loadBuiltinModule node:internal/modules/helpers:113:27
+      1  100.0%          JS: ~builtinStrategy node:internal/modules/esm/translators:406:52
+      1  100.0%            JS: ^#translate node:internal/modules/esm/loader:538:13
+      1    9.1%      JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1  100.0%        JS: ^traceSync node:diagnostics_channel:326:12
+      1  100.0%          JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1455:36
+      5    8.3%    /home/jules/.nvm/versions/node/v22.22.1/bin/node
+      1   20.0%      JS: ~packageResolve node:internal/modules/esm/resolve:762:24
+      1  100.0%        JS: ^moduleResolve node:internal/modules/esm/resolve:827:23
+      1  100.0%          JS: ^defaultResolve node:internal/modules/esm/resolve:940:24
+      1  100.0%            JS: ^#cachedDefaultResolve node:internal/modules/esm/loader:723:24
+      1   20.0%      JS: ~finalizeResolution node:internal/modules/esm/resolve:229:28
+      1  100.0%        JS: ~moduleResolve node:internal/modules/esm/resolve:827:23
+      1  100.0%          JS: ~defaultResolve node:internal/modules/esm/resolve:940:24
+      1  100.0%            JS: ~#cachedDefaultResolve node:internal/modules/esm/loader:723:24
+      1   20.0%      JS: ^readFileSync node:fs:433:22
+      1  100.0%        JS: ~getSourceSync node:internal/modules/esm/load:36:23
+      1  100.0%          JS: ~defaultLoadSync node:internal/modules/esm/load:136:25
+      1  100.0%            JS: ~#loadAndMaybeBlockOnLoaderThread node:internal/modules/esm/loader:825:35
+      1   20.0%      JS: *_node /app/node_modules/symbol-tree/lib/SymbolTree.js:49:14
+      1  100.0%        JS: ~following /app/node_modules/symbol-tree/lib/SymbolTree.js:220:18
+      1  100.0%          JS: ^next /app/node_modules/symbol-tree/lib/TreeIterator.js:16:13
+      1  100.0%            JS: ~exports.firstDescendantWithLocalName /app/node_modules/jsdom/lib/jsdom/living/helpers/traversal.js:64:40
+      1   20.0%      Builtin: ArraySome
+      1  100.0%        JS: ~exports.install /app/node_modules/jsdom/lib/generated/idl/MessageEvent.js:87:19
+      1  100.0%          JS: ~exports.installInterfaces /app/node_modules/jsdom/lib/jsdom/living/interfaces.js:254:29
+      1  100.0%            JS: ^exports.createWindow /app/node_modules/jsdom/lib/jsdom/browser/Window.js:45:24
+      1    1.7%    JS: ~cjsLoader node:internal/modules/esm/translators:307:38
+      1  100.0%      JS: ~<anonymous> node:internal/modules/esm/translators:198:67
+      1  100.0%        Builtin: CallApiCallbackGeneric
+      1  100.0%          JS: ~run node:internal/modules/esm/module_job:332:12
+      1  100.0%            Builtin: AsyncFunctionAwaitResolveClosure
+
+     37    1.7%  Builtin: KeyedLoadIC_Megamorphic
+     18   48.6%    JS: *contains /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:474:11
+     18  100.0%      JS: *<anonymous> :119:28
+     18  100.0%        Builtin: ArraySome
+     18  100.0%          JS: ^<anonymous> :118:27
+     18  100.0%            Builtin: ArrayFilter
+      2    5.4%    JS: *nextNode /app/node_modules/jsdom/lib/generated/idl/TreeWalker.js:159:13
+      1   50.0%      JS: ^_traverseAndCollectNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2214:30
+      1  100.0%        JS: ~_findNodeWalker file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2289:21
+      1  100.0%          JS: ~_findEntryNodesForType file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2455:28
+      1  100.0%            JS: ~_findEntryNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2557:21
+      1   50.0%      JS: *_traverseAndCollectNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2214:30
+      1  100.0%        JS: ^_findNodeWalker file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2289:21
+      1  100.0%          JS: ^_findEntryNodesForType file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2455:28
+      1  100.0%            JS: ^_findEntryNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2557:21
+      2    5.4%    JS: *<anonymous> :119:28
+      2  100.0%      Builtin: ArraySome
+      2  100.0%        JS: ^<anonymous> :118:27
+      2  100.0%          Builtin: ArrayFilter
+      2  100.0%            JS: ~removeNestedEntries :117:31
+      1    2.7%    JS: ~turnSpeaker :142:23
+      1  100.0%      JS: ~collectTurns :83:24
+      1  100.0%        JS: ~exportConversation :19:30
+      1  100.0%          JS: ^profile file:///app/test_profile.js:4:17
+      1  100.0%            Script: ~<anonymous> file:///app/test_profile.js:1:1
+      1    2.7%    JS: ^traceSync node:diagnostics_channel:326:12
+      1  100.0%      JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1455:36
+      1  100.0%          JS: ^require node:internal/modules/helpers:146:19
+      1  100.0%            JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/css/helpers/generic-property-descriptor.js:1:1
+      1    2.7%    JS: ^resolveExports node:internal/modules/cjs/loader:640:24
+      1  100.0%      JS: ^<anonymous> node:internal/modules/cjs/loader:669:28
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1300:35
+      1  100.0%          JS: ^defaultResolveImpl node:internal/modules/cjs/loader:1011:30
+      1  100.0%            JS: ^resolveForCJSWithHooks node:internal/modules/cjs/loader:1006:32
+      1    2.7%    JS: ^resolveContent file:///app/node_modules/@asamuzakjp/dom-selector/src/js/utility.js:262:31
+      1  100.0%      JS: ^setup file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:209:11
+      1  100.0%        JS: ^querySelector file:///app/node_modules/@asamuzakjp/dom-selector/src/index.js:300:19
+      1  100.0%          JS: ^querySelector /app/node_modules/jsdom/lib/jsdom/living/nodes/ParentNode-impl.js:62:16
+      1  100.0%            JS: ^querySelector /app/node_modules/jsdom/lib/generated/idl/Element.js:1074:18
+      1    2.7%    JS: ^get childNodes /app/node_modules/jsdom/lib/generated/idl/Node.js:554:19
+      1  100.0%      JS: ^renderElementChildren :155:33
+      1  100.0%        JS: ^renderNode :159:22
+      1  100.0%          JS: ^<anonymous> :156:44
+      1  100.0%            Builtin: ArrayMap
+      1    2.7%    JS: ^firstChild /app/node_modules/symbol-tree/lib/SymbolTree.js:87:19
+      1  100.0%      JS: ^get firstChild /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:189:17
+      1  100.0%        JS: ^nextNode /app/node_modules/jsdom/lib/jsdom/living/traversal/TreeWalker-impl.js:98:11
+      1  100.0%          JS: ^nextNode /app/node_modules/jsdom/lib/generated/idl/TreeWalker.js:159:13
+      1  100.0%            JS: ^_traverseAndCollectNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2214:30
+      1    2.7%    JS: ^collect /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1571:28
+      1  100.0%      JS: ^_querySelectorAll /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1715:44
+      1  100.0%        JS: ^_querySelector /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1808:40
+      1  100.0%          JS: ^querySelector file:///app/node_modules/@asamuzakjp/dom-selector/src/index.js:300:19
+      1  100.0%            JS: ^querySelector /app/node_modules/jsdom/lib/jsdom/living/nodes/ParentNode-impl.js:62:16
+      1    2.7%    JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1  100.0%      JS: ^traceSync node:diagnostics_channel:326:12
+      1  100.0%        JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1455:36
+      1  100.0%            JS: ^require node:internal/modules/helpers:146:19
+      1    2.7%    JS: *parent /app/node_modules/symbol-tree/lib/SymbolTree.js:143:15
+      1  100.0%      JS: ~isInclusiveAncestor /app/node_modules/jsdom/lib/jsdom/living/helpers/node.js:72:29
+      1  100.0%        JS: ~contains /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:474:11
+      1  100.0%          JS: ~contains /app/node_modules/jsdom/lib/generated/idl/Node.js:243:13
+      1  100.0%            JS: ~<anonymous> :119:28
+      1    2.7%    JS: *nodeRoot /app/node_modules/jsdom/lib/jsdom/living/helpers/node.js:23:18
+      1  100.0%      JS: ~exports.elementAttributeModified /app/node_modules/jsdom/lib/jsdom/living/window-properties.js:116:36
+      1  100.0%        JS: ^_attrModified /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:82:16
+      1  100.0%          JS: ^_attrModified /app/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:172:16
+      1  100.0%            JS: ^exports.appendAttribute /app/node_modules/jsdom/lib/jsdom/living/attributes.js:50:36
+      1    2.7%    JS: *nextNode /app/node_modules/jsdom/lib/jsdom/living/traversal/TreeWalker-impl.js:98:11
+      1  100.0%      JS: ^nextNode /app/node_modules/jsdom/lib/generated/idl/TreeWalker.js:159:13
+      1  100.0%        JS: ^_traverseAndCollectNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2214:30
+      1  100.0%          JS: ^_findNodeWalker file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2289:21
+      1  100.0%            JS: ~_findEntryNodesForType file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2455:28
+      1    2.7%    JS: *hasChildNodes /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:299:16
+      1  100.0%      JS: ^nextNode /app/node_modules/jsdom/lib/jsdom/living/traversal/TreeWalker-impl.js:98:11
+      1  100.0%        JS: ^nextNode /app/node_modules/jsdom/lib/generated/idl/TreeWalker.js:159:13
+      1  100.0%          JS: ^_traverseAndCollectNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2214:30
+      1  100.0%            JS: ^_findNodeWalker file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2289:21
+      1    2.7%    JS: *has /app/node_modules/jsdom/lib/generated/idl/HTMLCollection.js:211:6
+      1  100.0%      Builtin: ArrayPrototypeSlice
+      1  100.0%        JS: ^byTag /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:457:26
+      1  100.0%          JS: ^<anonymous> /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:525:23
+      1  100.0%            JS: ^_querySelectorAll /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1715:44
+      1    2.7%    JS: *_node /app/node_modules/symbol-tree/lib/SymbolTree.js:49:14
+      1  100.0%      JS: ~following /app/node_modules/symbol-tree/lib/SymbolTree.js:220:18
+      1  100.0%        JS: ^next /app/node_modules/symbol-tree/lib/TreeIterator.js:16:13
+      1  100.0%          JS: ~exports.firstDescendantWithLocalName /app/node_modules/jsdom/lib/jsdom/living/helpers/traversal.js:64:40
+      1  100.0%            JS: ~get title /app/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:587:12
+      1    2.7%    Builtin: ArraySome
+      1  100.0%      JS: ^<anonymous> :118:27
+      1  100.0%        Builtin: ArrayFilter
+      1  100.0%          JS: ~removeNestedEntries :117:31
+      1  100.0%            JS: ~findTurnContainers :107:30
+
+     28    1.3%  Builtin: LoadIC
+      2    7.1%    JS: ^_traverseAndCollectNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2214:30
+      2  100.0%      JS: ^_findNodeWalker file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2289:21
+      2  100.0%        JS: ~_findEntryNodesForType file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2455:28
+      2  100.0%          JS: ^_findEntryNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2557:21
+      2  100.0%            JS: ^_collectNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2726:19
+      2    7.1%    JS: ^<anonymous> node:internal/modules/cjs/loader:1300:35
+      2  100.0%      JS: ^defaultResolveImpl node:internal/modules/cjs/loader:1011:30
+      2  100.0%        JS: ^resolveForCJSWithHooks node:internal/modules/cjs/loader:1006:32
+      2  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      2  100.0%            JS: ^traceSync node:diagnostics_channel:326:12
+      1    3.6%    JS: ~has /app/node_modules/jsdom/lib/generated/idl/HTMLCollection.js:211:6
+      1  100.0%      Builtin: ArrayPrototypeSlice
+      1  100.0%        JS: ~byTag /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:457:26
+      1  100.0%          JS: ~<anonymous> /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:525:23
+      1  100.0%            JS: ~collect /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1571:28
+      1    3.6%    JS: ~fork /app/node_modules/css-tree/cjs/syntax/create.cjs:33:13
+      1  100.0%      JS: ~<anonymous> /app/node_modules/jsdom/lib/jsdom/living/css/helpers/patched-csstree.js:1:1
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1803:37
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      1    3.6%    JS: ^set textContent /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:576:18
+      1  100.0%      JS: ^set textContent /app/node_modules/jsdom/lib/generated/idl/Node.js:662:20
+      1  100.0%        JS: ^profile file:///app/test_profile.js:4:17
+      1  100.0%          Script: ~<anonymous> file:///app/test_profile.js:1:1
+      1  100.0%            Builtin: GeneratorPrototypeNext
+      1    3.6%    JS: ^querySelector file:///app/node_modules/@asamuzakjp/dom-selector/src/index.js:300:19
+      1  100.0%      JS: ^querySelector /app/node_modules/jsdom/lib/jsdom/living/nodes/ParentNode-impl.js:62:16
+      1  100.0%        JS: ~querySelector /app/node_modules/jsdom/lib/generated/idl/Document.js:1006:18
+      1  100.0%          JS: ~chooseUserName :66:26
+      1  100.0%            JS: ~exportConversation :19:30
+      1    3.6%    JS: ^parseSource node:internal/deps/cjs-module-lexer/lexer:85:22
+      1  100.0%      JS: ~parseCJS node:internal/deps/cjs-module-lexer/lexer:40:19
+      1  100.0%        JS: ~cjsPreparseModuleExports node:internal/modules/esm/translators:348:34
+      1  100.0%          JS: ~createCJSModuleWrap node:internal/modules/esm/translators:182:29
+      1  100.0%            JS: ~requireCommonJS node:internal/modules/esm/translators:271:58
+      1    3.6%    JS: ^nextNode /app/node_modules/jsdom/lib/jsdom/living/traversal/TreeWalker-impl.js:98:11
+      1  100.0%      JS: ^nextNode /app/node_modules/jsdom/lib/generated/idl/TreeWalker.js:159:13
+      1  100.0%        JS: ~_traverseAndCollectNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2214:30
+      1  100.0%          JS: ~_findNodeWalker file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2289:21
+      1  100.0%            JS: ~_findEntryNodesForType file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2455:28
+      1    3.6%    JS: ^matches /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:537:10
+      1  100.0%      JS: ^matches /app/node_modules/jsdom/lib/generated/idl/Element.js:637:12
+      1  100.0%        JS: ^pickTurnBody :123:24
+      1  100.0%          JS: ^collectTurns :83:24
+      1  100.0%            JS: ~exportConversation :19:30
+      1    3.6%    JS: ^makeProxy /app/node_modules/jsdom/lib/generated/idl/NodeList.js:37:19
+      1  100.0%      JS: ^exports.setup /app/node_modules/jsdom/lib/generated/idl/NodeList.js:58:17
+      1  100.0%        JS: ^exports.create /app/node_modules/jsdom/lib/generated/idl/NodeList.js:46:18
+      1  100.0%          JS: ^exports.createImpl /app/node_modules/jsdom/lib/generated/idl/NodeList.js:51:22
+      1  100.0%            JS: ^get childNodes /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:208:17
+      1    3.6%    JS: ^isHostInclusiveAncestor /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:101:33
+      1  100.0%      JS: ^_preInsertValidity /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:631:21
+      1  100.0%        JS: ^_preInsert /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:765:13
+      1  100.0%          JS: ^_append /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:880:10
+      1  100.0%            JS: ^appendChild /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:616:14
+      1    3.6%    JS: ^hasAttribute /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:279:15
+      1  100.0%      JS: ^hasAttribute /app/node_modules/jsdom/lib/generated/idl/Element.js:383:17
+      1  100.0%        JS: ^Resolver :3:38
+      1  100.0%          JS: ^collect /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1571:28
+      1  100.0%            JS: ^_querySelectorAll /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1715:44
+      1    3.6%    JS: ^getModuleJobForRequire node:internal/modules/esm/loader:446:25
+      1  100.0%      JS: ^ModuleJobSync node:internal/modules/esm/module_job:374:14
+      1  100.0%        JS: ~getModuleJobForRequire node:internal/modules/esm/loader:446:25
+      1  100.0%          JS: ~ModuleJobSync node:internal/modules/esm/module_job:374:14
+      1  100.0%            JS: ~getModuleJobForRequire node:internal/modules/esm/loader:446:25
+      1    3.6%    JS: ^getAttributeNS /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:203:17
+      1  100.0%      JS: ~namedItem /app/node_modules/jsdom/lib/jsdom/living/nodes/HTMLCollection-impl.js:25:12
+      1  100.0%        JS: ~getOwnPropertyDescriptor /app/node_modules/jsdom/lib/generated/idl/HTMLCollection.js:245:27
+      1  100.0%          JS: ~get /app/node_modules/jsdom/lib/generated/idl/HTMLCollection.js:189:6
+      1  100.0%            Builtin: ArrayPrototypeSlice
+      1    3.6%    JS: ^get file:///app/node_modules/@asamuzakjp/generational-cache/src/index.js:66:6
+      1  100.0%      JS: ^matches file:///app/node_modules/@asamuzakjp/dom-selector/src/index.js:191:13
+      1  100.0%        JS: ^matches /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:537:10
+      1  100.0%          JS: ^matches /app/node_modules/jsdom/lib/generated/idl/Element.js:637:12
+      1  100.0%            JS: ^pickTurnBody :123:24
+      1    3.6%    JS: ^findParentPackageJSON node:internal/modules/package_json_reader:142:31
+      1  100.0%      JS: ^getNearestParentPackageJSON node:internal/modules/package_json_reader:178:37
+      1  100.0%        JS: ^trySelf node:internal/modules/cjs/loader:596:17
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1300:35
+      1  100.0%            JS: ^defaultResolveImpl node:internal/modules/cjs/loader:1011:30
+      1    3.6%    JS: ^exports.create /app/node_modules/jsdom/lib/generated/idl/NodeList.js:46:18
+      1  100.0%      JS: ^exports.createImpl /app/node_modules/jsdom/lib/generated/idl/NodeList.js:51:22
+      1  100.0%        JS: ^get childNodes /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:208:17
+      1  100.0%          JS: ^<anonymous> /app/node_modules/jsdom/lib/generated/idl/Node.js:561:54
+      1  100.0%            JS: ^getSameObject /app/node_modules/jsdom/lib/generated/idl/utils.js:65:23
+      1    3.6%    JS: ^defaultResolveImpl node:internal/modules/cjs/loader:1011:30
+      1  100.0%      JS: ^resolveForCJSWithHooks node:internal/modules/cjs/loader:1006:32
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1  100.0%          JS: ^traceSync node:diagnostics_channel:326:12
+      1  100.0%            JS: ^wrapModuleLoad node:internal/modules/cjs/loader:230:24
+      1    3.6%    JS: ^createElement /app/node_modules/jsdom/lib/generated/idl/Document.js:236:18
+      1  100.0%      JS: ^profile file:///app/test_profile.js:4:17
+      1  100.0%        Script: ~<anonymous> file:///app/test_profile.js:1:1
+      1  100.0%          Builtin: GeneratorPrototypeNext
+      1  100.0%            Builtin: CallApiCallbackGeneric
+      1    3.6%    JS: ^ceReactionsPreSteps /app/node_modules/jsdom/lib/jsdom/living/helpers/custom-elements.js:49:29
+      1  100.0%      JS: ^appendChild /app/node_modules/jsdom/lib/generated/idl/Node.js:392:16
+      1  100.0%        JS: ^profile file:///app/test_profile.js:4:17
+      1  100.0%          Script: ~<anonymous> file:///app/test_profile.js:1:1
+      1  100.0%            Builtin: GeneratorPrototypeNext
+      1    3.6%    JS: ^basename node:path:1487:11
+      1  100.0%      JS: ^findLongestRegisteredExtension node:internal/modules/cjs/loader:559:40
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1432:33
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1169:24
+      1  100.0%            JS: ^traceSync node:diagnostics_channel:326:12
+      1    3.6%    JS: ^_modified /app/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:229:12
+      1  100.0%      JS: ^_attrModified /app/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:82:16
+      1  100.0%        JS: ^_attrModified /app/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:172:16
+      1  100.0%          JS: ^_attrModified /app/node_modules/jsdom/lib/jsdom/living/nodes/HTMLAnchorElement-impl.js:37:16
+      1  100.0%            JS: ^exports.appendAttribute /app/node_modules/jsdom/lib/jsdom/living/attributes.js:50:36
+      1    3.6%    JS: ^_getFilterLeaves file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2025:22
+      1  100.0%      JS: ^_findEntryNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2557:21
+      1  100.0%        JS: ^_collectNodes file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:2726:19
+      1  100.0%          JS: ^find file:///app/node_modules/@asamuzakjp/dom-selector/src/js/finder.js:3029:10
+      1  100.0%            JS: ^querySelector file:///app/node_modules/@asamuzakjp/dom-selector/src/index.js:300:19
+      1    3.6%    JS: ^Lexer /app/node_modules/css-tree/cjs/lexer/Lexer.cjs:106:16
+      1  100.0%      JS: ~createSyntax /app/node_modules/css-tree/cjs/syntax/create.cjs:11:22
+      1  100.0%        JS: ~createSyntax$1 /app/node_modules/css-tree/cjs/syntax/create.cjs:56:24
+      1  100.0%          JS: ~<anonymous> /app/node_modules/css-tree/cjs/syntax/index.cjs:1:1
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1655:37
+      1    3.6%    JS: ^<anonymous> :119:28
+      1  100.0%      Builtin: ArraySome
+      1  100.0%        JS: ^<anonymous> :118:27
+      1  100.0%          Builtin: ArrayFilter
+      1  100.0%            JS: ~removeNestedEntries :117:31
+      1    3.6%    JS: *get /app/node_modules/jsdom/lib/generated/idl/HTMLCollection.js:189:6
+      1  100.0%      Builtin: ArrayPrototypeSlice
+      1  100.0%        JS: ^byTag /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:457:26
+      1  100.0%          JS: ^<anonymous> /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:525:23
+      1  100.0%            JS: ^collect /app/node_modules/@asamuzakjp/nwsapi/src/nwsapi.js:1571:28
