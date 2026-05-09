@@ -63,18 +63,15 @@
   }
 
   function findComposer(documentRoot) {
-    const seen = new Set();
     const candidates = [];
+    const combinedSelector = COMPOSER_SELECTORS.join(',');
 
-    for (const selector of COMPOSER_SELECTORS) {
-      for (const element of documentRoot.querySelectorAll(selector)) {
-        if (seen.has(element) || !isVisible(element)) {
-          continue;
-        }
-
-        seen.add(element);
-        candidates.push(element);
+    for (const element of documentRoot.querySelectorAll(combinedSelector)) {
+      if (!isVisible(element)) {
+        continue;
       }
+
+      candidates.push(element);
     }
 
     candidates.sort((left, right) => {
