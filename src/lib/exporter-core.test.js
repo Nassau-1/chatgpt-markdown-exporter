@@ -11,7 +11,7 @@ const code = readFileSync(resolve('src/lib/exporter-core.js'), 'utf8');
 // The script defines a function and calls it with globalThis
 new Function('globalThis', 'Node', 'Element', code)(mockGlobal, class {}, class {});
 
-const { deriveConversationTitle } = mockGlobal.ChatGPTMarkdownExporter;
+const { deriveConversationTitle, protectMarkdown } = mockGlobal.ChatGPTMarkdownExporter;
 
 describe('deriveConversationTitle', () => {
   it('should return default title if documentRoot.title is missing', () => {
@@ -52,4 +52,31 @@ describe('deriveConversationTitle', () => {
   it('should handle titles with trailing spaces after suffix', () => {
     assert.strictEqual(deriveConversationTitle({ title: 'My Topic - ChatGPT  ' }), 'My Topic');
   });
+});
+
+describe('protectMarkdown', () => {
+  const cases = [
+    { input: 'hello', expected: 'hello', name: 'basic string' },
+    { input: '', expected: '', name: 'empty string' },
+    { input: null, expected: '', name: 'null input' },
+    { input: undefined, expected: '', name: 'undefined input' },
+    { input: '\\', expected: '\\\\', name: 'backslash' },
+    { input: '`', expected: '\\`', name: 'backtick' },
+    { input: '*', expected: '\\*', name: 'asterisk' },
+    { input: '_', expected: '\\_', name: 'underscore' },
+    { input: '#', expected: '\\#', name: 'hash' },
+    { input: '[', expected: '\\[', name: 'left bracket' },
+    { input: ']', expected: '\\]', name: 'right bracket' },
+    { input: 'hello *world*', expected: 'hello \\*world\\*', name: 'string with asterisks' },
+    { input: '[link](url)', expected: '\\[link\\](url)', name: 'string with brackets' },
+    { input: '# Header', expected: '\\# Header', name: 'string with hash' },
+    { input: 'back\\slash', expected: 'back\\\\slash', name: 'embedded backslash' },
+    { input: 'already \\*escaped\\*', expected: 'already \\\\\\*escaped\\\\\\*', name: 'already escaped characters' }
+  ];
+
+  for (const { input, expected, name } of cases) {
+    it(name, () => {
+      assert.strictEqual(protectMarkdown(input), expected);
+    });
+  }
 });
